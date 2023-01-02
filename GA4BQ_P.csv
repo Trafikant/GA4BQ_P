@@ -1,23 +1,32 @@
 Type,Origin,Nested,Category,"Pretty Name (used as SQL ""as"")",BQ Field,value type,inject to SELECT,Inject to WHERE,GROUP BY,Default paramaters,Additional Parameters,Count,Distinct,SUM,AVG
-Dimension,Built-in,FALSE,Ecommerce/items,Coupon,items.coupon,String,coupon,,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Ecommerce/items,Creative Name,items.creative_name,String,creative_name,,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Ecommerce/items,Creative slot,items.creative_slot,String,creative_slot,,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Ecommerce/items,Item Brand,items.item_brand,String,item_brand,,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
-Dimension,Built-in,FALSE,Ecommerce/items,Item Category 1,items.item_category,String,item_category,,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
-Dimension,Built-in,FALSE,Ecommerce/items,Item Category 2,items.item_category2,String,item_category2,,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
-Dimension,Built-in,FALSE,Ecommerce/items,Item Category 3,items.item_category3,String,item_category3,,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
-Dimension,Built-in,FALSE,Ecommerce/items,Item Category 4,items.item_category4,String,item_category4,,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
-Dimension,Built-in,FALSE,Ecommerce/items,Item Category 5,items.item_category5,String,item_category5,,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
-Dimension,Built-in,FALSE,Ecommerce/items,Item ID,items.item_id,String,item_id,,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
-Dimension,Built-in,FALSE,Ecommerce/items,Item List ID,items.item_list_id,String,item_list_id,,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Ecommerce/items,Item List Index,Items.item_list_index,String,item_list_index,,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Ecommerce/items,Item List Name,items.item_list_name,String,item_list_name,,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Ecommerce/items,Item name,items.item_name,String,item_name,,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
-Metric,Built-in,FALSE,Ecommerce/items,Item Refund,items.item_refund,Float,items.item_refund,,,NA,NA,FALSE,FALSE,TRUE,TRUE
-Metric,Built-in,FALSE,Ecommerce/items,Item Refund (USD),items.item_refund_in_usd,Float,items.item_refund_in_usd,,,NA,NA,FALSE,FALSE,TRUE,TRUE
-Metric,Built-in,FALSE,Ecommerce/items,Item Revenue,items.item_revenue,Float,items.item_revenue,,,NA,NA,FALSE,FALSE,TRUE,TRUE
-Metric,Built-in,FALSE,Ecommerce/items,Item Revenue (USD),items.item_revenue_in_usd,Float,items.item_revenue_in_usd,,,NA,NA,FALSE,FALSE,TRUE,TRUE
-Dimension,Built-in,FALSE,Ecommerce/items,Item Variant,items.item_variant,String,item_variant,,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
-Dimension,Built-in,FALSE,Ecommerce/items,Location ID,items.location_id,String,location_id,,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Metric,Built-in,FALSE,Ecommerce/items,Price,items.price,Float,,,,NA,NA,FALSE,FALSE,TRUE,TRUE
-Metric,Built-in,FALSE,Ecommerce/items,Price (USD),items.price_in_usd,Float,,,,NA,NA,FALSE,FALSE,TRUE,TRUE
+Dimension,Built-in,FALSE,App,App info Firebase App ID,app_info.firebase_app_id,String,app_info.firebase_app_id,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,App,App info ID,app_info.id,String,app_info.id,NA,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Built-in,FALSE,App,App info Install Source,app_info.install_source,String,app_info.install_source,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,App,app info version,app_info.version,String,app_info.version,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Campaign,Campaign,traffic_source.name,String,traffic_source.name,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Campaign,Medium,traffic_source.medium,String,traffic_source.medium,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Campaign,Source,traffic_source.source,String,traffic_source.source,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Date,Date,event_date,String,"parse_date(""%Y%m%d"",event_date)",NA,TRUE,NA,NA,FALSE,TRUE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Advertising ID,device.advertising_id,String,device.advertising_id,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Browser,device.web_info.browser,String,device.web_info.browser,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Browser Version,device.web_info.browser_version,String,device.web_info.browser_version,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Device Category,device.category,String,device.category,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Hostname,device.web_info.hostname,String,device.web_info.hostname,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Language,device.language,String,device.language,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Mobile Brand Name,device.mobile_brand_name,String,device.mobile_brand_name,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Mobile Marketing Name,device.mobile_marketing_name,String,device.mobile_marketing_name,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Mobile Model Name,device.mobile_model_name,String,device.mobile_model_name,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Mobile OS Hardware Model,device.mobile_os_hardware_model,String,device.mobile_os_hardware_model,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Operating System,device.operating_system,String,device.operating_system,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Operating System Version,device.operating_system_version,String,device.operating_system_version,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Vendor ID,device.vendor_id,String,device.vendor_id,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Ecommerce,Transaction ID,ecommerce.transaction_id,String,ecommerce.transaction_id,NA,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Built-in,FALSE,Events,Event Name,event_name,String,event_name,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Geo,City,geo.city,String,geo.city,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Geo,Continent,geo.continent,String,geo.continent,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Geo,Country,geo.country,String,geo.country,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Geo,Metro,geo.metro,String,geo.metro,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Geo,Region,geo.region,String,geo.region,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Geo,Sub-Continent,geo.sub_continent,String,geo.sub_continent,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Stream and platform,Platform,platform,String,platform,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Stream and platform,Stream ID,stream_id,String,stream_id,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
