@@ -1,0 +1,23 @@
+Type,Origin,Nested,Category,"Pretty Name (used as SQL ""as"")",BQ Field,value type,inject to SELECT,Inject to WHERE,GROUP BY,Default paramaters,Additional Parameters,Count,Distinct,SUM,AVG
+Dimension,Built-in,FALSE,Ecommerce/items,Coupon,items.coupon,String,coupon,,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Ecommerce/items,Creative Name,items.creative_name,String,creative_name,,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Ecommerce/items,Creative slot,items.creative_slot,String,creative_slot,,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Ecommerce/items,Item Brand,items.item_brand,String,item_brand,,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Built-in,FALSE,Ecommerce/items,Item Category 1,items.item_category,String,item_category,,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Built-in,FALSE,Ecommerce/items,Item Category 2,items.item_category2,String,item_category2,,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Built-in,FALSE,Ecommerce/items,Item Category 3,items.item_category3,String,item_category3,,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Built-in,FALSE,Ecommerce/items,Item Category 4,items.item_category4,String,item_category4,,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Built-in,FALSE,Ecommerce/items,Item Category 5,items.item_category5,String,item_category5,,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Built-in,FALSE,Ecommerce/items,Item ID,items.item_id,String,item_id,,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Built-in,FALSE,Ecommerce/items,Item List ID,items.item_list_id,String,item_list_id,,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Ecommerce/items,Item List Index,Items.item_list_index,String,item_list_index,,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Ecommerce/items,Item List Name,items.item_list_name,String,item_list_name,,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Ecommerce/items,Item name,items.item_name,String,item_name,,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
+Metric,Built-in,FALSE,Ecommerce/items,Item Refund,items.item_refund,Float,items.item_refund,,,NA,NA,FALSE,FALSE,TRUE,TRUE
+Metric,Built-in,FALSE,Ecommerce/items,Item Refund (USD),items.item_refund_in_usd,Float,items.item_refund_in_usd,,,NA,NA,FALSE,FALSE,TRUE,TRUE
+Metric,Built-in,FALSE,Ecommerce/items,Item Revenue,items.item_revenue,Float,items.item_revenue,,,NA,NA,FALSE,FALSE,TRUE,TRUE
+Metric,Built-in,FALSE,Ecommerce/items,Item Revenue (USD),items.item_revenue_in_usd,Float,items.item_revenue_in_usd,,,NA,NA,FALSE,FALSE,TRUE,TRUE
+Dimension,Built-in,FALSE,Ecommerce/items,Item Variant,items.item_variant,String,item_variant,,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Built-in,FALSE,Ecommerce/items,Location ID,items.location_id,String,location_id,,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Metric,Built-in,FALSE,Ecommerce/items,Price,items.price,Float,,,,NA,NA,FALSE,FALSE,TRUE,TRUE
+Metric,Built-in,FALSE,Ecommerce/items,Price (USD),items.price_in_usd,Float,,,,NA,NA,FALSE,FALSE,TRUE,TRUE
