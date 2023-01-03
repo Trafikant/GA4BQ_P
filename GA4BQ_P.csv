@@ -1,2 +1,8 @@
 Type,Origin,Nested,Category,"Pretty Name (used as SQL ""as"")",BQ Field,value type,inject to SELECT,Inject to WHERE,GROUP BY,Default paramaters,Additional Parameters,Count,Distinct,SUM,AVG
 Metric,Calculated,FALSE,General,Session_start,NA,INT,count(event_name),"event_name=""session_start""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
+Dimension,Built-in,FALSE,Geo,City,geo.city,String,geo.city,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Geo,Continent,geo.continent,String,geo.continent,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Geo,Country,geo.country,String,geo.country,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Geo,Metro,geo.metro,String,geo.metro,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Geo,Region,geo.region,String,geo.region,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Geo,Sub-Continent,geo.sub_continent,String,geo.sub_continent,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
