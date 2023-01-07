@@ -6,3 +6,16 @@ Dimension,Built-in,FALSE,Geo,Country,geo.country,String,geo.country,NA,TRUE,NA,N
 Dimension,Built-in,FALSE,Geo,Metro,geo.metro,String,geo.metro,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
 Dimension,Built-in,FALSE,Geo,Region,geo.region,String,geo.region,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
 Dimension,Built-in,FALSE,Geo,Sub-Continent,geo.sub_continent,String,geo.sub_continent,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Advertising_ID,device.advertising_id,String,device.advertising_id,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Browser,device.web_info.browser,String,device.web_info.browser,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Browser_Version,device.web_info.browser_version,String,device.web_info.browser_version,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Device_Category,device.category,String,device.category,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Hostname,device.web_info.hostname,String,device.web_info.hostname,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Language,device.language,String,device.language,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Mobile_Brand_Name,device.mobile_brand_name,String,device.mobile_brand_name,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Mobile_Marketing_Name,device.mobile_marketing_name,String,device.mobile_marketing_name,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Mobile_Model_Name,device.mobile_model_name,String,device.mobile_model_name,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Mobile_OS_Hardware_Model,device.mobile_os_hardware_model,String,device.mobile_os_hardware_model,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Operating_System,device.operating_system,String,device.operating_system,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Operating_System_Version,device.operating_system_version,String,device.operating_system_version,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Vendor_ID,device.vendor_id,String,device.vendor_id,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
