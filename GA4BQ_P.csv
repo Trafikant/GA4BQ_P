@@ -109,3 +109,5 @@ Metric,Calculated,FALSE,General,Form_submit,NA,INT,count(event_name),"event_name
 Metric,Calculated,FALSE,General,Generate_leads,NA,INT,count(event_name),"event_name=""generate_lead""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",,NA,NA,NA,NA
 Metric,Calculated,FALSE,General,In_app_purchases,NA,INT,count(event_name),"event_name=""in_app_purchase""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution","product_id, price, value, currency, quantity, subscription, free_trial, introductory_price",NA,NA,NA,NA
 Metric,Calculated,FALSE,General,Join_group,NA,INT,count(event_name),"event_name=""join_group""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",,NA,NA,NA,NA
+Dimension,Built-in,FALSE,User,User_ID,user_id,String,user_id,NA,,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Built-in,FALSE,User,User_pseudo_ID,user_pseudo_id,String,user_pseudo_id,NA,,NA,NA,TRUE,TRUE,FALSE,FALSE
