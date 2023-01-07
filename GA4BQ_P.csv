@@ -40,3 +40,11 @@ Dimension,Built-in,FALSE,Ecommerce,Transaction_ID,ecommerce.transaction_id,Strin
 Dimension,Built-in,FALSE,Events,Event_Name,event_name,String,event_name,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
 Dimension,Built-in,FALSE,Stream and platform,Platform,platform,String,platform,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
 Dimension,Built-in,FALSE,Stream and platform,Stream_ID,stream_id,String,stream_id,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Date,Date,event_date,String,"parse_date(""%Y%m%d"",event_date)",NA,TRUE,NA,NA,FALSE,TRUE,FALSE,FALSE
+Dimension,Calculated,FALSE,Date,Day,NA,String,"EXTRACT(DAY FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Calculated,FALSE,Date,Day_Name,NA,String,"EXTRACT(DAYOFWEEK FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Calculated,FALSE,Date,Month,NA,String,"EXTRACT(MONTH FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Calculated,FALSE,Date,Quarter,NA,String,"EXTRACT(QUARTER FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Calculated,FALSE,Date,Week_number_mon-sun,NA,String,"EXTRACT(WEEK(MONDAY) FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Calculated,FALSE,Date,Week_number_sun-sat,NA,String,"EXTRACT(WEEK(SUNDAY) FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Calculated,FALSE,Date,Year,NA,String,"EXTRACT(YEAR FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
