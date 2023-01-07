@@ -19,3 +19,10 @@ Dimension,Built-in,FALSE,Device,Mobile_OS_Hardware_Model,device.mobile_os_hardwa
 Dimension,Built-in,FALSE,Device,Operating_System,device.operating_system,String,device.operating_system,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
 Dimension,Built-in,FALSE,Device,Operating_System_Version,device.operating_system_version,String,device.operating_system_version,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
 Dimension,Built-in,FALSE,Device,Vendor_ID,device.vendor_id,String,device.vendor_id,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,App,App info Firebase App ID,app_info.firebase_app_id,String,app_info.firebase_app_id,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,App,App info ID,app_info.id,String,app_info.id,NA,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Built-in,FALSE,App,App info Install Source,app_info.install_source,String,app_info.install_source,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,App,app info version,app_info.version,String,app_info.version,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Campaign,Campaign,traffic_source.name,String,traffic_source.name,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Campaign,Medium,traffic_source.medium,String,traffic_source.medium,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Campaign,Source,traffic_source.source,String,traffic_source.source,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
