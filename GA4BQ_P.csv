@@ -36,3 +36,7 @@ Metric,Built-in,FALSE,Ecommerce,Tax_Value,ecommerce.tax_value,Float,sum(ecommerc
 Metric,Built-in,FALSE,Ecommerce,Tax_Value_USD,ecommerce.tax_value_in_usd,Float,sum(ecommerce.tax_value_in_usd),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
 Metric,Built-in,FALSE,Ecommerce,Total_Item_Quantity,ecommerce.total_item_quantity,Integer,sum(ecommerce.total_item_quantity),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
 Metric,Built-in,FALSE,Ecommerce,Unique_Items,ecommerce.unique_items,String,sum(ecommerce.unique_item),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
+Dimension,Built-in,FALSE,Ecommerce,Transaction_ID,ecommerce.transaction_id,String,ecommerce.transaction_id,NA,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Built-in,FALSE,Events,Event_Name,event_name,String,event_name,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Stream and platform,Platform,platform,String,platform,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Stream and platform,Stream_ID,stream_id,String,stream_id,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
