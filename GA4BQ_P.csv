@@ -1,115 +1,115 @@
-Type,Origin,Nested,Category,"Pretty Name (used as SQL ""as"")",BQ Field,value type,inject to SELECT,Inject to WHERE,GROUP BY,Default paramaters,Additional Parameters,Count,Distinct,SUM,AVG
-Metric,Calculated,FALSE,General,Session_start,NA,INT,count(event_name),"event_name=""session_start""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
-Dimension,Built-in,FALSE,Geo,City,geo.city,String,geo.city,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Geo,Continent,geo.continent,String,geo.continent,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Geo,Country,geo.country,String,geo.country,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Geo,Metro,geo.metro,String,geo.metro,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Geo,Region,geo.region,String,geo.region,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Geo,Sub-Continent,geo.sub_continent,String,geo.sub_continent,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Device,Advertising_ID,device.advertising_id,String,device.advertising_id,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Device,Browser,device.web_info.browser,String,device.web_info.browser,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Device,Browser_Version,device.web_info.browser_version,String,device.web_info.browser_version,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Device,Device_Category,device.category,String,device.category,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Device,Hostname,device.web_info.hostname,String,device.web_info.hostname,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Device,Language,device.language,String,device.language,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Device,Mobile_Brand_Name,device.mobile_brand_name,String,device.mobile_brand_name,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Device,Mobile_Marketing_Name,device.mobile_marketing_name,String,device.mobile_marketing_name,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Device,Mobile_Model_Name,device.mobile_model_name,String,device.mobile_model_name,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Device,Mobile_OS_Hardware_Model,device.mobile_os_hardware_model,String,device.mobile_os_hardware_model,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Device,Operating_System,device.operating_system,String,device.operating_system,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Device,Operating_System_Version,device.operating_system_version,String,device.operating_system_version,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Device,Vendor_ID,device.vendor_id,String,device.vendor_id,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,App,App info Firebase App ID,app_info.firebase_app_id,String,app_info.firebase_app_id,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,App,App info ID,app_info.id,String,app_info.id,NA,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
-Dimension,Built-in,FALSE,App,App info Install Source,app_info.install_source,String,app_info.install_source,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,App,app info version,app_info.version,String,app_info.version,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Campaign,Campaign,traffic_source.name,String,traffic_source.name,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Campaign,Medium,traffic_source.medium,String,traffic_source.medium,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Campaign,Source,traffic_source.source,String,traffic_source.source,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Metric,Built-in,FALSE,Ecommerce,Purchase_Revenue,ecommerce.purchase_revenue,Float,sum(ecommerce.purchase_revenue),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
-Metric,Built-in,FALSE,Ecommerce,Purchase_Revenue_USD,ecommerce.purchase_revenue_in_usd,Float,sum(ecommerce.purchase_revenue_in_usd),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
-Metric,Built-in,FALSE,Ecommerce,Refund_Value,ecommerce.refund_value,Float,sum(ecommerce.refund_value),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
-Metric,Built-in,FALSE,Ecommerce,Refund_Value_USD,ecommerce.refund_value_in_usd,Float,sum(ecommerce.refund_value_in_usd),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
-Metric,Built-in,FALSE,Ecommerce,Shipping_Value,ecommerce.shipping_value,Float,sum(ecommerce.shipping_value),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
-Metric,Built-in,FALSE,Ecommerce,Shipping_Value_USD,ecommerce.shipping_value_in_usd,Float,sum(ecommerce.shipping_value_in_usd),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
-Metric,Built-in,FALSE,Ecommerce,Tax_Value,ecommerce.tax_value,Float,sum(ecommerce.tax_value),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
-Metric,Built-in,FALSE,Ecommerce,Tax_Value_USD,ecommerce.tax_value_in_usd,Float,sum(ecommerce.tax_value_in_usd),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
-Metric,Built-in,FALSE,Ecommerce,Total_Item_Quantity,ecommerce.total_item_quantity,Integer,sum(ecommerce.total_item_quantity),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
-Metric,Built-in,FALSE,Ecommerce,Unique_Items,ecommerce.unique_items,String,sum(ecommerce.unique_item),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
-Dimension,Built-in,FALSE,Ecommerce,Transaction_ID,ecommerce.transaction_id,String,ecommerce.transaction_id,NA,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
-Dimension,Built-in,FALSE,Events,Event_Name,event_name,String,event_name,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Stream and platform,Platform,platform,String,platform,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Stream and platform,Stream_ID,stream_id,String,stream_id,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Date,Date,event_date,String,"parse_date(""%Y%m%d"",event_date)",NA,TRUE,NA,NA,FALSE,TRUE,FALSE,FALSE
-Dimension,Calculated,FALSE,Date,Day,NA,String,"EXTRACT(DAY FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Calculated,FALSE,Date,Day_number,NA,String,"EXTRACT(DAYOFWEEK FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Calculated,FALSE,Date,Month,NA,String,"EXTRACT(MONTH FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Calculated,FALSE,Date,Quarter,NA,String,"EXTRACT(QUARTER FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Calculated,FALSE,Date,Week_number_mon_sun,NA,String,"EXTRACT(WEEK(MONDAY) FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Calculated,FALSE,Date,Week_number_sun_sat,NA,String,"EXTRACT(WEEK(SUNDAY) FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Calculated,FALSE,Date,Year,NA,String,"EXTRACT(YEAR FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Metric,Calculated,FALSE,Application,Ad_rewards_app,NA,INT,count(event_name),event_name = 'ad_reward',FALSE,"language, page_location, page_referrer, page_title, screen_resolution","ad_unit_code, reward_type, reward_value",FALSE,FALSE,FALSE,FALSE
-Metric,Calculated,FALSE,Application,App_clear_data_app,NA,INT,count(event_name),event_name = 'app_clear_data',FALSE,"language, page_location, page_referrer, page_title, screen_resolution",,FALSE,FALSE,FALSE,FALSE
-Metric,Calculated,FALSE,Application,App_exceptions_app,NA,INT,count(event_name),event_name = 'app_exception',FALSE,"language, page_location, page_referrer, page_title, screen_resolution","fatal, timestamp, engagement_time_msec",FALSE,FALSE,FALSE,FALSE
-Metric,Calculated,FALSE,Application,App_removals_app,NA,INT,count(event_name),event_name = 'app_remove',FALSE,"language, page_location, page_referrer, page_title, screen_resolution",,FALSE,FALSE,FALSE,FALSE
-Metric,Calculated,FALSE,Application,App_updates_app,NA,INT,count(event_name),event_name = 'app_update',FALSE,"language, page_location, page_referrer, page_title, screen_resolution",previous_app_version,FALSE,FALSE,FALSE,FALSE
-Metric,Calculated,FALSE,Application,Dynamic_link_app_openings_app,NA,INT,count(event_name),event_name = 'dynamic_link_app_open',FALSE,"language, page_location, page_referrer, page_title, screen_resolution","source, medium, campaign, link_id, accept_time",FALSE,FALSE,FALSE,FALSE
-Metric,Calculated,FALSE,Application,Dynamic_link_app_updates,NA,INT,count(event_name),event_name = 'dynamic_link_app_update',FALSE,"language, page_location, page_referrer, page_title, screen_resolution","source, medium, campaign, link_id, accept_time",FALSE,FALSE,FALSE,FALSE
-Metric,Calculated,FALSE,Application,Dynamic_link_first_openings_app,NA,INT,count(event_name),event_name = 'dynamic_link_first_open',FALSE,"language, page_location, page_referrer, page_title, screen_resolution","source, medium, campaign, link_id, accept_time",FALSE,FALSE,FALSE,FALSE
-Metric,Calculated,FALSE,Application,Firebase_in_app_message_actions,NA,INT,count(event_name),event_name = 'firebase_in_app_message_action',FALSE,"language, page_location, page_referrer, page_title, screen_resolution","message_name, message_device_time, message_id",FALSE,FALSE,FALSE,FALSE
-Metric,Calculated,FALSE,Application,Firebase_in_app_message_dismiss,NA,INT,count(event_name),event_name = 'firebase_in_app_message_dismiss',FALSE,"language, page_location, page_referrer, page_title, screen_resolution","message_name, message_device_time, message_id",FALSE,FALSE,FALSE,FALSE
-Metric,Calculated,FALSE,Application,Firebase_in_app_message_impressions,NA,INT,count(event_name),event_name = 'firebase_in_app_message_impression',FALSE,"language, page_location, page_referrer, page_title, screen_resolution","message_name, message_device_time, message_id",FALSE,FALSE,FALSE,FALSE
-Metric,Calculated,FALSE,Ecommerce,Add_payment_info,NA,INT,count(event_name),event_name = 'add_payment_info',FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,FALSE,FALSE,FALSE,FALSE
-Metric,Calculated,FALSE,Ecommerce,Add_shipping_info,NA,INT,count(event_name),event_name = 'add_shipping_info',FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,FALSE,FALSE,FALSE,FALSE
-Metric,Calculated,FALSE,Ecommerce,Add_to_cart,NA,INT,count(event_name),event_name = 'add_to_cart',FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,FALSE,FALSE,FALSE,FALSE
-Metric,Calculated,FALSE,Ecommerce,Add_to_wishlist,NA,INT,count(event_name),event_name = 'add_to_wishlist',FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,FALSE,FALSE,FALSE,FALSE
-Metric,Calculated,FALSE,Ecommerce,Begin_checkout,NA,INT,count(event_name),event_name = 'begin_checkout',FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,FALSE,FALSE,FALSE,FALSE
-Metric,Calculated,FALSE,Ecommerce,Purchases,NA,INT,count(event_name),event_name = 'purchase',FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,FALSE,FALSE,FALSE,FALSE
-Metric,Calculated,FALSE,Ecommerce,Refunds,NA,INT,count(event_name),event_name = 'refund',FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,FALSE,FALSE,FALSE,FALSE
-Metric,Calculated,FALSE,Ecommerce,Remove_from_cart,NA,INT,count(event_name),event_name = 'remove_from_cart',FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,FALSE,FALSE,FALSE,FALSE
-Metric,Calculated,FALSE,Ecommerce,Select_item,NA,INT,count(event_name),event_name = 'select_item',FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,FALSE,FALSE,FALSE,FALSE
-Metric,Calculated,FALSE,Ecommerce,Select_promotion,NA,INT,count(event_name),event_name = 'select_promotion',FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,FALSE,FALSE,FALSE,FALSE
-Metric,Calculated,FALSE,Ecommerce,View_cart,NA,INT,count(event_name),event_name = 'view_cart',FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
-Metric,Calculated,FALSE,Ecommerce,View_item,NA,INT,count(event_name),event_name = 'view_item',FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
-Metric,Calculated,FALSE,Ecommerce,View_item_list,NA,INT,count(event_name),event_name = 'view_item_list',FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
-Metric,Calculated,FALSE,Ecommerce,View_promotion,NA,INT,count(event_name),event_name = 'view_promotion',FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
-Metric,Calculated,FALSE,General,Level_end,NA,INT,count(event_name),"event_name=""level_end""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
-Metric,Calculated,FALSE,General,Level_start,NA,INT,count(event_name),"event_name=""level_start""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
-Metric,Calculated,FALSE,General,Level_up,NA,INT,count(event_name),"event_name=""level_up""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
-Metric,Calculated,FALSE,General,Logins,NA,INT,count(event_name),"event_name=""login""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
-Metric,Calculated,FALSE,General,OS_update,NA,INT,count(event_name),"event_name=""os_update""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",previous_os_version,NA,NA,NA,NA
-Metric,Calculated,FALSE,General,Pageviews,NA,INT,count(event_name),"event_name=""page_view""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",engagement_time_msec,NA,NA,NA,NA
-Metric,Calculated,FALSE,General,Post_score,NA,INT,count(event_name),"event_name=""post_score""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
-Metric,Calculated,FALSE,General,Screenviews,NA,INT,count(event_name),"event_name=""screen_view""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution","firebase_screen, firebase_screen_class, firebase_screen_id, firebase_previous_screen, firebase_previous_class, firebase_previous_id, engagement_time_msec",NA,NA,NA,NA
-Metric,Calculated,FALSE,General,Scrolls,NA,INT,count(event_name),"event_name=""scroll""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",engagement_time_msec,NA,NA,NA,NA
-Metric,Calculated,FALSE,General,Searches,NA,INT,count(event_name),"event_name=""search""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
-Metric,Calculated,FALSE,General,Select_Content,NA,INT,count(event_name),"event_name=""select_content""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
-Metric,Calculated,FALSE,General,Shares,NA,INT,count(event_name),"event_name=""share""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
-Metric,Calculated,FALSE,General,Sign_ups,NA,INT,count(event_name),"event_name=""sign_up""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
-Metric,Calculated,FALSE,General,Spend_virtual_currnecy,NA,INT,count(event_name),"event_name=""spend_virtual_currency""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
-Metric,Calculated,FALSE,General,Unlocak_achievement,NA,INT,count(event_name),"event_name=""unlock_achievement""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
-Metric,Calculated,FALSE,General,User_engagement,NA,INT,count(event_name),"event_name=""user_engagement""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",engagement_time_msec,NA,NA,NA,NA
-Metric,Calculated,FALSE,Notifications,Notification_dismiss,NA,INT,count(event_name),"event_name=""notification_dismiss""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution","message_name, message_time, message_device_time, message_id, topic, label, message_channel",NA,NA,NA,NA
-Metric,Calculated,FALSE,Notifications,Notification_foreground,NA,INT,count(event_name),"event_name=""notification_foreground""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution","message_name, message_time, message_device_time, message_id, topic, label, message_channel, message_type",NA,NA,NA,NA
-Metric,Calculated,FALSE,Notifications,Notification_open,NA,INT,count(event_name),"event_name=""notification_open""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution","message_name, message_time, message_device_time, message_id, topic, label, message_channel",NA,NA,NA,NA
-Metric,Calculated,FALSE,Notifications,Notification_receive,NA,INT,count(event_name),"event_name=""notification_receive""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution","message_name, message_time, message_device_time, message_id, topic, label, message_channel, message_type",NA,NA,NA,NA
-Metric,Calculated,FALSE,Notifications,Notification_send,NA,INT,count(event_name),"event_name=""notification_send""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution","message_name, message_time, message_device_time, message_id, topic, label, message_channel",NA,NA,NA,NA
-Metric,Calculated,FALSE,Search,View_search_results,NA,INT,count(event_name),"event_name=""view_search_results""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",search_term,NA,NA,NA,NA
-Metric,Calculated,FALSE,Video,Video_complete,NA,INT,count(event_name),"event_name=""video_complete""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution","video_current_time, video_duration, video_percent, video_provider, video_title, video_url, visible",NA,NA,NA,NA
-Metric,Calculated,FALSE,Video,Video_engagement,NA,INT,count(event_name),"event_name=""video_engagement""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
-Metric,Calculated,FALSE,Video,Video_progress,NA,INT,count(event_name),"event_name=""video_progress""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution","video_current_time, video_duration, video_percent, video_provider, video_title, video_url, visible",NA,NA,NA,NA
-Metric,Calculated,FALSE,Video,Video_start,NA,INT,count(event_name),"event_name=""video_start""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution","video_current_time, video_duration, video_percent, video_provider, video_title, video_url, visible",NA,NA,NA,NA
-Metric,Calculated,FALSE,General,Clicks,NA,INT,count(event_name),"event_name=""click""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",,NA,NA,NA,NA
-Metric,Calculated,FALSE,General,Earn_virtual_currency,NA,INT,count(event_name),"event_name=""earn_virtual_currency""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",,NA,NA,NA,NA
-Metric,Calculated,FALSE,General,File_download,NA,INT,count(event_name),"event_name=""file_download""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution","file_extension, file_name link_classes, link_domain, link_id, link_text, link_url",NA,NA,NA,NA
-Metric,Calculated,FALSE,General,First_open,NA,INT,count(event_name),"event_name=""first_open""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution","previous_gmp_app_id, updated_with_analytics, previous_first_open_count, system_app, system_app_update, deferred_analytics_collection, reset_analytics_cause, engagement_time_msec",NA,NA,NA,NA
-Metric,Calculated,FALSE,General,First_visit,NA,INT,count(event_name),"event_name=""first_visit""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",,NA,NA,NA,NA
-Metric,Calculated,FALSE,General,Form_start,NA,INT,count(event_name),"event_name=""form_start""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution","form_id, form_name, form_destination",NA,NA,NA,NA
-Metric,Calculated,FALSE,General,Form_submit,NA,INT,count(event_name),"event_name=""form_submit""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution","form_id, form_name, form_destination, form_submit_text",NA,NA,NA,NA
-Metric,Calculated,FALSE,General,Generate_leads,NA,INT,count(event_name),"event_name=""generate_lead""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",,NA,NA,NA,NA
-Metric,Calculated,FALSE,General,In_app_purchases,NA,INT,count(event_name),"event_name=""in_app_purchase""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution","product_id, price, value, currency, quantity, subscription, free_trial, introductory_price",NA,NA,NA,NA
-Metric,Calculated,FALSE,General,Join_group,NA,INT,count(event_name),"event_name=""join_group""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",,NA,NA,NA,NA
-Dimension,Built-in,FALSE,User,User_ID,user_id,String,user_id,NA,,NA,NA,TRUE,TRUE,FALSE,FALSE
-Dimension,Built-in,FALSE,User,User_pseudo_ID,user_pseudo_id,String,user_pseudo_id,NA,,NA,NA,TRUE,TRUE,FALSE,FALSE
-Metric,Calculated,FALSE,General,Tutorial_begin,NA,INT,count(event_name),"event_name=""tutorial_begin""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,FALSE,FALSE,FALSE,FALSE
-Metric,Calculated,FALSE,General,Tutorial_complete,NA,INT,count(event_name),"event_name=""tutorial_complete""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,FALSE,FALSE,FALSE,FALSE
+Type,Origin,Nested,Category,"Pretty Name (used as SQL ""as"")",Label,BQ Field,value type,inject to SELECT,Inject to WHERE,GROUP BY,Default paramaters,Additional Parameters,Count,Distinct,SUM,AVG
+Metric,Calculated,FALSE,General,Sessions,Sessions,NA,INT,count(event_name),"event_name=""session_start""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
+Dimension,Built-in,FALSE,Geo,City,City,geo.city,String,geo.city,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Geo,Continent,Continent,geo.continent,String,geo.continent,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Geo,Country,Country,geo.country,String,geo.country,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Geo,Metro,Metro,geo.metro,String,geo.metro,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Geo,Region,Region,geo.region,String,geo.region,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Geo,Sub-Continent,Sub-Continent,geo.sub_continent,String,geo.sub_continent,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Advertising ID,Advertising_ID,device.advertising_id,String,device.advertising_id,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Browser,Browser,device.web_info.browser,String,device.web_info.browser,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Browser Version,Browser_Version,device.web_info.browser_version,String,device.web_info.browser_version,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Device Category,Device_Category,device.category,String,device.category,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Hostname,Hostname,device.web_info.hostname,String,device.web_info.hostname,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Language,Language,device.language,String,device.language,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Mobile Brand Name,Mobile_Brand_Name,device.mobile_brand_name,String,device.mobile_brand_name,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Mobile Marketing Name,Mobile_Marketing_Name,device.mobile_marketing_name,String,device.mobile_marketing_name,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Mobile Model Name,Mobile_Model_Name,device.mobile_model_name,String,device.mobile_model_name,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Mobile OS Hardware Model,Mobile_OS_Hardware_Model,device.mobile_os_hardware_model,String,device.mobile_os_hardware_model,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Operating System,Operating_System,device.operating_system,String,device.operating_system,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Operating System Version,Operating_System_Version,device.operating_system_version,String,device.operating_system_version,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Vendor ID,Vendor_ID,device.vendor_id,String,device.vendor_id,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,App,App info Firebase App ID,App info Firebase App ID,app_info.firebase_app_id,String,app_info.firebase_app_id,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,App,App info ID,App info ID,app_info.id,String,app_info.id,NA,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Built-in,FALSE,App,App info Install Source,App info Install Source,app_info.install_source,String,app_info.install_source,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,App,app info version,app info version,app_info.version,String,app_info.version,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Campaign,Campaign,Campaign,traffic_source.name,String,traffic_source.name,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Campaign,Medium,Medium,traffic_source.medium,String,traffic_source.medium,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Campaign,Source,Source,traffic_source.source,String,traffic_source.source,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Metric,Built-in,FALSE,Ecommerce,Purchase Revenue,Purchase_Revenue,ecommerce.purchase_revenue,Float,ecommerce.purchase_revenue,NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
+Metric,Built-in,FALSE,Ecommerce,Purchase Revenue (USD),Purchase_Revenue_USD,ecommerce.purchase_revenue_in_usd,Float,ecommerce.purchase_revenue_in_usd,NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
+Metric,Built-in,FALSE,Ecommerce,Refund Value,Refund_Value,ecommerce.refund_value,Float,ecommerce.refund_value,NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
+Metric,Built-in,FALSE,Ecommerce,Refund Value (USD),Refund_Value_USD,ecommerce.refund_value_in_usd,Float,ecommerce.refund_value_in_usd,NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
+Metric,Built-in,FALSE,Ecommerce,Shipping Value,Shipping_Value,ecommerce.shipping_value,Float,ecommerce.shipping_value,NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
+Metric,Built-in,FALSE,Ecommerce,Shipping Value (USD),Shipping_Value_USD,ecommerce.shipping_value_in_usd,Float,ecommerce.shipping_value_in_usd,NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
+Metric,Built-in,FALSE,Ecommerce,Tax Value,Tax_Value,ecommerce.tax_value,Float,ecommerce.tax_value,NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
+Metric,Built-in,FALSE,Ecommerce,Tax Value (USD),Tax_Value_USD,ecommerce.tax_value_in_usd,Float,ecommerce.tax_value_in_usd,NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
+Metric,Built-in,FALSE,Ecommerce,Total Item Quantity,Total_Item_Quantity,ecommerce.total_item_quantity,Integer,ecommerce.total_item_quantity,NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
+Metric,Built-in,FALSE,Ecommerce,Unique Items,Unique_Items,ecommerce.unique_items,String,ecommerce.unique_items,NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
+Dimension,Built-in,FALSE,Ecommerce,Transaction ID,Transaction_ID,ecommerce.transaction_id,String,ecommerce.transaction_id,NA,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Built-in,FALSE,Events,Event Name,Event_Name,event_name,String,event_name,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Stream and platform,Platform,Platform,platform,String,platform,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Stream and platform,Stream ID,Stream_ID,stream_id,String,stream_id,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Date,Date,Date,event_date,String,"parse_date(""%Y%m%d"",event_date)",NA,TRUE,NA,NA,FALSE,TRUE,FALSE,FALSE
+Dimension,Calculated,FALSE,Date,Day,Day,NA,String,"EXTRACT(DAY FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Calculated,FALSE,Date,Day Number (1-7),Day_Number,NA,String,"EXTRACT(DAYOFWEEK FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Calculated,FALSE,Date,Month,Month,NA,String,"EXTRACT(MONTH FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Calculated,FALSE,Date,Quarter,Quarter,NA,String,"EXTRACT(QUARTER FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Calculated,FALSE,Date,Week number (Mon_Sun),Week_number_mon_sun,NA,String,"EXTRACT(WEEK(MONDAY) FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Calculated,FALSE,Date,Week number (Sun_Sat),Week_number_sun_sat,NA,String,"EXTRACT(WEEK(SUNDAY) FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Calculated,FALSE,Date,Year,Year,NA,String,"EXTRACT(YEAR FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Metric,Calculated,FALSE,Application,Ad rewards (app),Ad_rewards_app,NA,INT,count(event_name),event_name = 'ad_reward',FALSE,"language, page_location, page_referrer, page_title, screen_resolution","ad_unit_code, reward_type, reward_value",FALSE,FALSE,FALSE,FALSE
+Metric,Calculated,FALSE,Application,App clear data (app),App_clear_data_app,NA,INT,count(event_name),event_name = 'app_clear_data',FALSE,"language, page_location, page_referrer, page_title, screen_resolution",,FALSE,FALSE,FALSE,FALSE
+Metric,Calculated,FALSE,Application,App exceptions (app),App_exceptions_app,NA,INT,count(event_name),event_name = 'app_exception',FALSE,"language, page_location, page_referrer, page_title, screen_resolution","fatal, timestamp, engagement_time_msec",FALSE,FALSE,FALSE,FALSE
+Metric,Calculated,FALSE,Application,App removals (app),App_removals_app,NA,INT,count(event_name),event_name = 'app_remove',FALSE,"language, page_location, page_referrer, page_title, screen_resolution",,FALSE,FALSE,FALSE,FALSE
+Metric,Calculated,FALSE,Application,App updates (app),App_updates_app,NA,INT,count(event_name),event_name = 'app_update',FALSE,"language, page_location, page_referrer, page_title, screen_resolution",previous_app_version,FALSE,FALSE,FALSE,FALSE
+Metric,Calculated,FALSE,Application,Dynamic link app openings (app),Dynamic_link_app_openings_app,NA,INT,count(event_name),event_name = 'dynamic_link_app_open',FALSE,"language, page_location, page_referrer, page_title, screen_resolution","source, medium, campaign, link_id, accept_time",FALSE,FALSE,FALSE,FALSE
+Metric,Calculated,FALSE,Application,Dynamic link app updates,Dynamic_link_app_updates,NA,INT,count(event_name),event_name = 'dynamic_link_app_update',FALSE,"language, page_location, page_referrer, page_title, screen_resolution","source, medium, campaign, link_id, accept_time",FALSE,FALSE,FALSE,FALSE
+Metric,Calculated,FALSE,Application,Dynamic link first openings (app),Dynamic_link_first_openings_app,NA,INT,count(event_name),event_name = 'dynamic_link_first_open',FALSE,"language, page_location, page_referrer, page_title, screen_resolution","source, medium, campaign, link_id, accept_time",FALSE,FALSE,FALSE,FALSE
+Metric,Calculated,FALSE,Application,Firebase in app message actions,Firebase_in_app_message_actions,NA,INT,count(event_name),event_name = 'firebase_in_app_message_action',FALSE,"language, page_location, page_referrer, page_title, screen_resolution","message_name, message_device_time, message_id",FALSE,FALSE,FALSE,FALSE
+Metric,Calculated,FALSE,Application,Firebase in app message dismiss,Firebase_in_app_message_dismiss,NA,INT,count(event_name),event_name = 'firebase_in_app_message_dismiss',FALSE,"language, page_location, page_referrer, page_title, screen_resolution","message_name, message_device_time, message_id",FALSE,FALSE,FALSE,FALSE
+Metric,Calculated,FALSE,Application,Firebase in app message impressions,Firebase_in_app_message_impressions,NA,INT,count(event_name),event_name = 'firebase_in_app_message_impression',FALSE,"language, page_location, page_referrer, page_title, screen_resolution","message_name, message_device_time, message_id",FALSE,FALSE,FALSE,FALSE
+Metric,Calculated,FALSE,Ecommerce,Add payment info,Add_payment_info,NA,INT,count(event_name),event_name = 'add_payment_info',FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,FALSE,FALSE,FALSE,FALSE
+Metric,Calculated,FALSE,Ecommerce,Add shipping info,Add_shipping_info,NA,INT,count(event_name),event_name = 'add_shipping_info',FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,FALSE,FALSE,FALSE,FALSE
+Metric,Calculated,FALSE,Ecommerce,Add to cart,Add_to_cart,NA,INT,count(event_name),event_name = 'add_to_cart',FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,FALSE,FALSE,FALSE,FALSE
+Metric,Calculated,FALSE,Ecommerce,Add to wishlist,Add_to_wishlist,NA,INT,count(event_name),event_name = 'add_to_wishlist',FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,FALSE,FALSE,FALSE,FALSE
+Metric,Calculated,FALSE,Ecommerce,Begin checkout,Begin_checkout,NA,INT,count(event_name),event_name = 'begin_checkout',FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,FALSE,FALSE,FALSE,FALSE
+Metric,Calculated,FALSE,Ecommerce,Purchases,Purchases,NA,INT,count(event_name),event_name = 'purchase',FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,FALSE,FALSE,FALSE,FALSE
+Metric,Calculated,FALSE,Ecommerce,Refunds,Refunds,NA,INT,count(event_name),event_name = 'refund',FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,FALSE,FALSE,FALSE,FALSE
+Metric,Calculated,FALSE,Ecommerce,Remove from cart,Remove_from_cart,NA,INT,count(event_name),event_name = 'remove_from_cart',FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,FALSE,FALSE,FALSE,FALSE
+Metric,Calculated,FALSE,Ecommerce,Select item,Select_item,NA,INT,count(event_name),event_name = 'select_item',FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,FALSE,FALSE,FALSE,FALSE
+Metric,Calculated,FALSE,Ecommerce,Select promotion,Select_promotion,NA,INT,count(event_name),event_name = 'select_promotion',FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,FALSE,FALSE,FALSE,FALSE
+Metric,Calculated,FALSE,Ecommerce,View cart,View_cart,NA,INT,count(event_name),event_name = 'view_cart',FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
+Metric,Calculated,FALSE,Ecommerce,View item,View_item,NA,INT,count(event_name),event_name = 'view_item',FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
+Metric,Calculated,FALSE,Ecommerce,View item list,View_item_list,NA,INT,count(event_name),event_name = 'view_item_list',FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
+Metric,Calculated,FALSE,Ecommerce,View promotion,View_promotion,NA,INT,count(event_name),event_name = 'view_promotion',FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
+Metric,Calculated,FALSE,General,Level end,Level_end,NA,INT,count(event_name),"event_name=""level_end""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
+Metric,Calculated,FALSE,General,Level start,Level_start,NA,INT,count(event_name),"event_name=""level_start""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
+Metric,Calculated,FALSE,General,Level up,Level_up,NA,INT,count(event_name),"event_name=""level_up""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
+Metric,Calculated,FALSE,General,Logins,Logins,NA,INT,count(event_name),"event_name=""login""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
+Metric,Calculated,FALSE,General,OS update,OS_update,NA,INT,count(event_name),"event_name=""os_update""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",previous_os_version,NA,NA,NA,NA
+Metric,Calculated,FALSE,General,Pageviews,Pageviews,NA,INT,count(event_name),"event_name=""page_view""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",engagement_time_msec,NA,NA,NA,NA
+Metric,Calculated,FALSE,General,Post score,Post_score,NA,INT,count(event_name),"event_name=""post_score""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
+Metric,Calculated,FALSE,General,Screenviews,Screenviews,NA,INT,count(event_name),"event_name=""screen_view""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution","firebase_screen, firebase_screen_class, firebase_screen_id, firebase_previous_screen, firebase_previous_class, firebase_previous_id, engagement_time_msec",NA,NA,NA,NA
+Metric,Calculated,FALSE,General,Scrolls,Scrolls,NA,INT,count(event_name),"event_name=""scroll""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",engagement_time_msec,NA,NA,NA,NA
+Metric,Calculated,FALSE,General,Searches,Searches,NA,INT,count(event_name),"event_name=""search""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
+Metric,Calculated,FALSE,General,Select Content,Select_Content,NA,INT,count(event_name),"event_name=""select_content""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
+Metric,Calculated,FALSE,General,Shares,Shares,NA,INT,count(event_name),"event_name=""share""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
+Metric,Calculated,FALSE,General,Sign ups,Sign_ups,NA,INT,count(event_name),"event_name=""sign_up""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
+Metric,Calculated,FALSE,General,Spend virtual currnecy,Spend_virtual_currnecy,NA,INT,count(event_name),"event_name=""spend_virtual_currency""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
+Metric,Calculated,FALSE,General,Unlocak achievement,Unlocak_achievement,NA,INT,count(event_name),"event_name=""unlock_achievement""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
+Metric,Calculated,FALSE,General,User engagement,User_engagement,NA,INT,count(event_name),"event_name=""user_engagement""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",engagement_time_msec,NA,NA,NA,NA
+Metric,Calculated,FALSE,Notifications,Notification dismiss,Notification_dismiss,NA,INT,count(event_name),"event_name=""notification_dismiss""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution","message_name, message_time, message_device_time, message_id, topic, label, message_channel",NA,NA,NA,NA
+Metric,Calculated,FALSE,Notifications,Notification foreground,Notification_foreground,NA,INT,count(event_name),"event_name=""notification_foreground""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution","message_name, message_time, message_device_time, message_id, topic, label, message_channel, message_type",NA,NA,NA,NA
+Metric,Calculated,FALSE,Notifications,Notification open,Notification_open,NA,INT,count(event_name),"event_name=""notification_open""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution","message_name, message_time, message_device_time, message_id, topic, label, message_channel",NA,NA,NA,NA
+Metric,Calculated,FALSE,Notifications,Notification receive,Notification_receive,NA,INT,count(event_name),"event_name=""notification_receive""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution","message_name, message_time, message_device_time, message_id, topic, label, message_channel, message_type",NA,NA,NA,NA
+Metric,Calculated,FALSE,Notifications,Notification send,Notification_send,NA,INT,count(event_name),"event_name=""notification_send""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution","message_name, message_time, message_device_time, message_id, topic, label, message_channel",NA,NA,NA,NA
+Metric,Calculated,FALSE,Search,View search results,View_search_results,NA,INT,count(event_name),"event_name=""view_search_results""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",search_term,NA,NA,NA,NA
+Metric,Calculated,FALSE,Video,Video complete,Video_complete,NA,INT,count(event_name),"event_name=""video_complete""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution","video_current_time, video_duration, video_percent, video_provider, video_title, video_url, visible",NA,NA,NA,NA
+Metric,Calculated,FALSE,Video,Video engagement,Video_engagement,NA,INT,count(event_name),"event_name=""video_engagement""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
+Metric,Calculated,FALSE,Video,Video progress,Video_progress,NA,INT,count(event_name),"event_name=""video_progress""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution","video_current_time, video_duration, video_percent, video_provider, video_title, video_url, visible",NA,NA,NA,NA
+Metric,Calculated,FALSE,Video,Video start,Video_start,NA,INT,count(event_name),"event_name=""video_start""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution","video_current_time, video_duration, video_percent, video_provider, video_title, video_url, visible",NA,NA,NA,NA
+Metric,Calculated,FALSE,General,Clicks,Clicks,NA,INT,count(event_name),"event_name=""click""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",,NA,NA,NA,NA
+Metric,Calculated,FALSE,General,Earn virtual currency,Earn_virtual_currency,NA,INT,count(event_name),"event_name=""earn_virtual_currency""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",,NA,NA,NA,NA
+Metric,Calculated,FALSE,General,File download,File_download,NA,INT,count(event_name),"event_name=""file_download""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution","file_extension, file_name link_classes, link_domain, link_id, link_text, link_url",NA,NA,NA,NA
+Metric,Calculated,FALSE,General,First open,First_open,NA,INT,count(event_name),"event_name=""first_open""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution","previous_gmp_app_id, updated_with_analytics, previous_first_open_count, system_app, system_app_update, deferred_analytics_collection, reset_analytics_cause, engagement_time_msec",NA,NA,NA,NA
+Metric,Calculated,FALSE,General,First visit,First_visit,NA,INT,count(event_name),"event_name=""first_visit""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",,NA,NA,NA,NA
+Metric,Calculated,FALSE,General,Form start,Form_start,NA,INT,count(event_name),"event_name=""form_start""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution","form_id, form_name, form_destination",NA,NA,NA,NA
+Metric,Calculated,FALSE,General,Form submit,Form_submit,NA,INT,count(event_name),"event_name=""form_submit""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution","form_id, form_name, form_destination, form_submit_text",NA,NA,NA,NA
+Metric,Calculated,FALSE,General,Generate leads,Generate_leads,NA,INT,count(event_name),"event_name=""generate_lead""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",,NA,NA,NA,NA
+Metric,Calculated,FALSE,General,In app purchases,In_app_purchases,NA,INT,count(event_name),"event_name=""in_app_purchase""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution","product_id, price, value, currency, quantity, subscription, free_trial, introductory_price",NA,NA,NA,NA
+Metric,Calculated,FALSE,General,Join group,Join_group,NA,INT,count(event_name),"event_name=""join_group""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",,NA,NA,NA,NA
+Dimension,Built-in,FALSE,User,User ID,User_ID,user_id,String,user_id,NA,,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Built-in,FALSE,User,User pseudo ID,User_pseudo_ID,user_pseudo_id,String,user_pseudo_id,NA,,NA,NA,TRUE,TRUE,FALSE,FALSE
+Metric,Calculated,FALSE,General,Tutorial begin,Tutorial_begin,NA,INT,count(event_name),"event_name=""tutorial_begin""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,FALSE,FALSE,FALSE,FALSE
+Metric,Calculated,FALSE,General,Tutorial  complete,Tutorial_complete,NA,INT,count(event_name),"event_name=""tutorial_complete""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,FALSE,FALSE,FALSE,FALSE
