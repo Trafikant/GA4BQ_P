@@ -26,16 +26,16 @@ Dimension,Built-in,FALSE,App,app info version,app_info_version,app_info.version,
 Dimension,Built-in,FALSE,Campaign,Campaign,Campaign,traffic_source.name,String,traffic_source.name,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
 Dimension,Built-in,FALSE,Campaign,Medium,Medium,traffic_source.medium,String,traffic_source.medium,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
 Dimension,Built-in,FALSE,Campaign,Source,Source,traffic_source.source,String,traffic_source.source,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Metric,Built-in,FALSE,Ecommerce,Purchase Revenue,Purchase_Revenue,ecommerce.purchase_revenue,Float,ecommerce.purchase_revenue,NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
-Metric,Built-in,FALSE,Ecommerce,Purchase Revenue (USD),Purchase_Revenue_USD,ecommerce.purchase_revenue_in_usd,Float,ecommerce.purchase_revenue_in_usd,NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
-Metric,Built-in,FALSE,Ecommerce,Refund Value,Refund_Value,ecommerce.refund_value,Float,ecommerce.refund_value,NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
-Metric,Built-in,FALSE,Ecommerce,Refund Value (USD),Refund_Value_USD,ecommerce.refund_value_in_usd,Float,ecommerce.refund_value_in_usd,NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
-Metric,Built-in,FALSE,Ecommerce,Shipping Value,Shipping_Value,ecommerce.shipping_value,Float,ecommerce.shipping_value,NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
-Metric,Built-in,FALSE,Ecommerce,Shipping Value (USD),Shipping_Value_USD,ecommerce.shipping_value_in_usd,Float,ecommerce.shipping_value_in_usd,NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
-Metric,Built-in,FALSE,Ecommerce,Tax Value,Tax_Value,ecommerce.tax_value,Float,ecommerce.tax_value,NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
-Metric,Built-in,FALSE,Ecommerce,Tax Value (USD),Tax_Value_USD,ecommerce.tax_value_in_usd,Float,ecommerce.tax_value_in_usd,NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
-Metric,Built-in,FALSE,Ecommerce,Total Item Quantity,Total_Item_Quantity,ecommerce.total_item_quantity,Integer,ecommerce.total_item_quantity,NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
-Metric,Built-in,FALSE,Ecommerce,Unique Items,Unique_Items,ecommerce.unique_items,String,ecommerce.unique_items,NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
+Metric,Built-in,FALSE,Ecommerce,Purchase Revenue,Purchase_Revenue,ecommerce.purchase_revenue,Float,sum(ecommerce.purchase_revenue),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
+Metric,Built-in,FALSE,Ecommerce,Purchase Revenue (USD),Purchase_Revenue_USD,ecommerce.purchase_revenue_in_usd,Float,sum(ecommerce.purchase_revenue_in_usd),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
+Metric,Built-in,FALSE,Ecommerce,Refund Value,Refund_Value,ecommerce.refund_value,Float,sum(ecommerce.refund_value),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
+Metric,Built-in,FALSE,Ecommerce,Refund Value (USD),Refund_Value_USD,ecommerce.refund_value_in_usd,Float,sum(ecommerce.refund_value_in_usd),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
+Metric,Built-in,FALSE,Ecommerce,Shipping Value,Shipping_Value,ecommerce.shipping_value,Float,sum(ecommerce.shipping_value),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
+Metric,Built-in,FALSE,Ecommerce,Shipping Value (USD),Shipping_Value_USD,ecommerce.shipping_value_in_usd,Float,sum(ecommerce.shipping_value_in_usd),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
+Metric,Built-in,FALSE,Ecommerce,Tax Value,Tax_Value,ecommerce.tax_value,Float,sum(ecommerce.tax_value),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
+Metric,Built-in,FALSE,Ecommerce,Tax Value (USD),Tax_Value_USD,ecommerce.tax_value_in_usd,Float,sum(ecommerce.tax_value_in_usd),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
+Metric,Built-in,FALSE,Ecommerce,Total Item Quantity,Total_Item_Quantity,ecommerce.total_item_quantity,Integer,sum(ecommerce.total_item_quantity),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
+Metric,Built-in,FALSE,Ecommerce,Unique Items,Unique_Items,ecommerce.unique_items,String,sum(ecommerce.unique_item),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
 Dimension,Built-in,FALSE,Ecommerce,Transaction ID,Transaction_ID,ecommerce.transaction_id,String,ecommerce.transaction_id,NA,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
 Dimension,Built-in,FALSE,Events,Event Name,Event_Name,event_name,String,event_name,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
 Dimension,Built-in,FALSE,Stream and platform,Platform,Platform,platform,String,platform,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
