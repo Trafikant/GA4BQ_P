@@ -1,9 +1,5 @@
 Type,Origin,Nested,Category,label,as,BQ Field,value type,inject to SELECT,Inject to WHERE,GROUP BY,Default paramaters,Additional Parameters,Count,Distinct,SUM,AVG
-Metric,Calculated,FALSE,General,Sessions,Sessions,NA,INT,"Metric	Calculated	FALSE	General	Sessions	Sessions	NA	INT	""count(DISTINCT
-        CONCAT(user_pseudo_id, """"-"""", 
-            (SELECT value.int_value FROM unnest(event_params) WHERE key=""""ga_session_id"""")
-        )
-    )""		FALSE	language, page_location, page_referrer, page_title, screen_resolution	NA	NA	NA	NA	NA",,FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
+Metric,Calculated,FALSE,General,Sessions,Sessions,NA,INT,"count(DISTINCT CONCAT(user_pseudo_id, ""-"",(SELECT value.int_value FROM unnest(event_params) WHERE key=""ga_session_id"")))",,FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
 Dimension,Built-in,FALSE,Geo,City,City,geo.city,String,geo.city,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
 Dimension,Built-in,FALSE,Geo,Continent,Continent,geo.continent,String,geo.continent,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
 Dimension,Built-in,FALSE,Geo,Country,Country,geo.country,String,geo.country,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
