@@ -113,3 +113,4 @@ Dimension,Built-in,FALSE,User,User ID,User_ID,user_id,String,user_id,NA,,NA,NA,T
 Dimension,Built-in,FALSE,User,User pseudo ID,User_pseudo_ID,user_pseudo_id,String,user_pseudo_id,NA,,NA,NA,TRUE,TRUE,FALSE,FALSE
 Metric,Calculated,FALSE,General,Tutorial begin,Tutorial_begin,NA,INT,count(event_name),"event_name=""tutorial_begin""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,FALSE,FALSE,FALSE,FALSE
 Metric,Calculated,FALSE,General,Tutorial  complete,Tutorial_complete,NA,INT,count(event_name),"event_name=""tutorial_complete""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,FALSE,FALSE,FALSE,FALSE
+Metric,Calculated,FALSE,General,Users,Users,NA,INT,COUNT(DISTINCT user_pseudo_id),,,NA,NA,FALSE,FALSE,FALSE,FALSE
