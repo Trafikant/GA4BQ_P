@@ -121,7 +121,7 @@ Metric,Calculated,FALSE,General,Bounce Rate,Bounce_Rate,NA,Float,"ROUND(100*(saf
 Dimension,Calculated,FALSE,General,Language,Language,NA,String,(SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'Language'),NA,NA,NA,NA,TRUE,TRUE,FALSE,FALSE
 Dimension,Calculated,FALSE,General,Page_location,Page_location,NA,String,(SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'page_location'),NA,NA,NA,NA,TRUE,TRUE,FALSE,FALSE
 Dimension,Calculated,FALSE,General,Page_referrer,Page_referrer,NA,String,(SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'page_referrer'),NA,NA,NA,NA,TRUE,TRUE,FALSE,FALSE
-Dimension,Calculated,FALSE,General,Page_title,Page_title,NA,String,(SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'page_title'),NA,NA,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Calculated,FALSE,General,Page Title,Page_Title,NA,String,(SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'page_title'),NA,NA,NA,NA,TRUE,TRUE,FALSE,FALSE
 Dimension,Calculated,FALSE,Date,Event Timestamp,Event_timestamp,event_timestamp,String,event_timestamp,NA,TRUE,NA,NA,NA,NA,NA,NA
 Dimension,Calculated,FALSE,General,Session ID,Session_id,NA,STRING,(SELECT value.int_value FROM UNNEST(event_params) WHERE key = 'ga_session_id'),NA,FALSE,NA,NA,NA,NA,NA,NA
 Dimension,Calculated,FALSE,General,Session Number,Session_number,NA,INT,(SELECT value.int_value FROM UNNEST(event_params) WHERE key = 'ga_session_number'),NA,FALSE,NA,NA,NA,NA,NA,NA
