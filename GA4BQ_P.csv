@@ -123,4 +123,4 @@ Dimension,Calculated,FALSE,General,Language,Language,NA,String,(SELECT value.str
 Dimension,Calculated,FALSE,General,Page_location,Page_location,NA,String,(SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'page_location'),NA,NA,NA,NA,TRUE,TRUE,FALSE,FALSE
 Dimension,Calculated,FALSE,General,Page_referrer,Page_referrer,NA,String,(SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'page_referrer'),NA,NA,NA,NA,TRUE,TRUE,FALSE,FALSE
 Dimension,Calculated,FALSE,General,Page_title,Page_title,NA,String,(SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'page_title'),NA,NA,NA,NA,TRUE,TRUE,FALSE,FALSE
-Dimension,Calculated,FALSE,Date,Event Timestamp,Event_timetamp,event_timetamp,String,event_timetamp,NA,TRUE,NA,NA,NA,NA,NA,NA
+Dimension,Calculated,FALSE,Date,Event Timestamp,Event_timestamp,event_timestamp,String,event_timestamp,NA,TRUE,NA,NA,NA,NA,NA,NA
