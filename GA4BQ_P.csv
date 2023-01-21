@@ -1,53 +1,53 @@
 Type,Origin,Nested,Category,label,as,BQ Field,value type,inject to SELECT,Inject to WHERE,GROUP BY,Default paramaters,Additional Parameters,Count,Distinct,SUM,AVG
 Metric,Calculated,FALSE,General,Sessions,Sessions,NA,INT,"count(DISTINCT CONCAT(user_pseudo_id, ""-"",(SELECT value.int_value FROM unnest(event_params) WHERE key=""ga_session_id"")))",,FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
-Dimension,Built-in,FALSE,Geo,City,City,geo.city,String,geo.city,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Geo,Continent,Continent,geo.continent,String,geo.continent,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Geo,Country,Country,geo.country,String,geo.country,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Geo,Metro,Metro,geo.metro,String,geo.metro,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Geo,Region,Region,geo.region,String,geo.region,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Geo,Sub-Continent,Sub-Continent,geo.sub_continent,String,geo.sub_continent,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Device,Advertising ID,Advertising_ID,device.advertising_id,String,device.advertising_id,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Device,Browser,Browser,device.web_info.browser,String,device.web_info.browser,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Device,Browser Version,Browser_Version,device.web_info.browser_version,String,device.web_info.browser_version,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Device,Device Category,Device_Category,device.category,String,device.category,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Device,Hostname,Hostname,device.web_info.hostname,String,device.web_info.hostname,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Device,Language,Language,device.language,String,device.language,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Device,Mobile Brand Name,Mobile_Brand_Name,device.mobile_brand_name,String,device.mobile_brand_name,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Device,Mobile Marketing Name,Mobile_Marketing_Name,device.mobile_marketing_name,String,device.mobile_marketing_name,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Device,Mobile Model Name,Mobile_Model_Name,device.mobile_model_name,String,device.mobile_model_name,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Device,Mobile OS Hardware Model,Mobile_OS_Hardware_Model,device.mobile_os_hardware_model,String,device.mobile_os_hardware_model,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Device,Operating System,Operating_System,device.operating_system,String,device.operating_system,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Device,Operating System Version,Operating_System_Version,device.operating_system_version,String,device.operating_system_version,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Device,Vendor ID,Vendor_ID,device.vendor_id,String,device.vendor_id,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,App,App info Firebase App ID,App_info_Firebase_App_ID,app_info.firebase_app_id,String,app_info.firebase_app_id,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,App,App info ID,App_info_ID,app_info.id,String,app_info.id,NA,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
-Dimension,Built-in,FALSE,App,App info Install Source,App_info_Install_Source,app_info.install_source,String,app_info.install_source,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,App,app info version,app_info_version,app_info.version,String,app_info.version,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Campaign,Campaign,Campaign,traffic_source.name,String,traffic_source.name,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Campaign,Medium,Medium,traffic_source.medium,String,traffic_source.medium,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Campaign,Source,Source,traffic_source.source,String,traffic_source.source,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Metric,Built-in,FALSE,Ecommerce,Purchase Revenue,Purchase_Revenue,ecommerce.purchase_revenue,Float,sum(ecommerce.purchase_revenue),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
-Metric,Built-in,FALSE,Ecommerce,Purchase Revenue (USD),Purchase_Revenue_USD,ecommerce.purchase_revenue_in_usd,Float,sum(ecommerce.purchase_revenue_in_usd),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
-Metric,Built-in,FALSE,Ecommerce,Refund Value,Refund_Value,ecommerce.refund_value,Float,sum(ecommerce.refund_value),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
-Metric,Built-in,FALSE,Ecommerce,Refund Value (USD),Refund_Value_USD,ecommerce.refund_value_in_usd,Float,sum(ecommerce.refund_value_in_usd),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
-Metric,Built-in,FALSE,Ecommerce,Shipping Value,Shipping_Value,ecommerce.shipping_value,Float,sum(ecommerce.shipping_value),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
-Metric,Built-in,FALSE,Ecommerce,Shipping Value (USD),Shipping_Value_USD,ecommerce.shipping_value_in_usd,Float,sum(ecommerce.shipping_value_in_usd),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
-Metric,Built-in,FALSE,Ecommerce,Tax Value,Tax_Value,ecommerce.tax_value,Float,sum(ecommerce.tax_value),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
-Metric,Built-in,FALSE,Ecommerce,Tax Value (USD),Tax_Value_USD,ecommerce.tax_value_in_usd,Float,sum(ecommerce.tax_value_in_usd),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
-Metric,Built-in,FALSE,Ecommerce,Total Item Quantity,Total_Item_Quantity,ecommerce.total_item_quantity,Integer,sum(ecommerce.total_item_quantity),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
-Metric,Built-in,FALSE,Ecommerce,Unique Items,Unique_Items,ecommerce.unique_items,String,sum(ecommerce.unique_item),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
-Dimension,Built-in,FALSE,Ecommerce,Transaction ID,Transaction_ID,ecommerce.transaction_id,String,ecommerce.transaction_id,NA,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
-Dimension,Built-in,FALSE,Events,Event Name,Event_Name,event_name,String,event_name,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Stream and platform,Platform,Platform,platform,String,platform,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Stream and platform,Stream ID,Stream_ID,stream_id,String,stream_id,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Built-in,FALSE,Date,Date,Date,event_date,String,"parse_date(""%Y%m%d"",event_date)",NA,TRUE,NA,NA,FALSE,TRUE,FALSE,FALSE
-Dimension,Calculated,FALSE,Date,Day,Day,NA,String,"EXTRACT(DAY FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Calculated,FALSE,Date,Day Number (1-7),Day_Number,NA,String,"EXTRACT(DAYOFWEEK FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Calculated,FALSE,Date,Month,Month,NA,String,"EXTRACT(MONTH FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Calculated,FALSE,Date,Quarter,Quarter,NA,String,"EXTRACT(QUARTER FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Calculated,FALSE,Date,Week number (Mon_Sun),Week_number_mon_sun,NA,String,"EXTRACT(WEEK(MONDAY) FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Calculated,FALSE,Date,Week number (Sun_Sat),Week_number_sun_sat,NA,String,"EXTRACT(WEEK(SUNDAY) FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Calculated,FALSE,Date,Year,Year,NA,String,"EXTRACT(YEAR FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Geo,City,City,geo.city,STRING,geo.city,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Geo,Continent,Continent,geo.continent,STRING,geo.continent,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Geo,Country,Country,geo.country,STRING,geo.country,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Geo,Metro,Metro,geo.metro,STRING,geo.metro,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Geo,Region,Region,geo.region,STRING,geo.region,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Geo,Sub-continent,Sub-Continent,geo.sub_continent,STRING,geo.sub_continent,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Advertising ID,Advertising_ID,device.advertising_id,STRING,device.advertising_id,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Browser,Browser,device.web_info.browser,STRING,device.web_info.browser,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Browser version,Browser_version,device.web_info.browser_version,STRING,device.web_info.browser_version,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Device category,Device_category,device.category,STRING,device.category,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Hostname,Hostname,device.web_info.hostname,STRING,device.web_info.hostname,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Language,Language,device.language,STRING,device.language,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Mobile brand name,Mobile_brand_name,device.mobile_brand_name,STRING,device.mobile_brand_name,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Mobile marketing name,Mobile_marketing_name,device.mobile_marketing_name,STRING,device.mobile_marketing_name,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Mobile model name,Mobile_model_name,device.mobile_model_name,STRING,device.mobile_model_name,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Mobile OS hardware model,Mobile_OS_hardware_model,device.mobile_os_hardware_model,STRING,device.mobile_os_hardware_model,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Operating system,Operating_system,device.operating_system,STRING,device.operating_system,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Operating system version,Operating_system_version,device.operating_system_version,STRING,device.operating_system_version,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Device,Vendor ID,Vendor_ID,device.vendor_id,STRING,device.vendor_id,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,App,App info Firebase app ID,App_info_Firebase_App_ID,app_info.firebase_app_id,STRING,app_info.firebase_app_id,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,App,App info ID,App_info_ID,app_info.id,STRING,app_info.id,NA,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Built-in,FALSE,App,App info install source,App_info_install_source,app_info.install_source,STRING,app_info.install_source,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,App,app info version,app_info_version,app_info.version,STRING,app_info.version,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Campaign,Campaign,Campaign,traffic_source.name,STRING,traffic_source.name,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Campaign,Medium,Medium,traffic_source.medium,STRING,traffic_source.medium,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Campaign,Source,Source,traffic_source.source,STRING,traffic_source.source,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Metric,Built-in,FALSE,Ecommerce,Purchase revenue,Purchase_Revenue,ecommerce.purchase_revenue,FLOAT,sum(ecommerce.purchase_revenue),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
+Metric,Built-in,FALSE,Ecommerce,Purchase revenue (USD),Purchase_Revenue_USD,ecommerce.purchase_revenue_in_usd,FLOAT,sum(ecommerce.purchase_revenue_in_usd),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
+Metric,Built-in,FALSE,Ecommerce,Refund value,Refund_Value,ecommerce.refund_value,FLOAT,sum(ecommerce.refund_value),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
+Metric,Built-in,FALSE,Ecommerce,Refund value (USD),Refund_Value_USD,ecommerce.refund_value_in_usd,FLOAT,sum(ecommerce.refund_value_in_usd),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
+Metric,Built-in,FALSE,Ecommerce,Shipping value,Shipping_Value,ecommerce.shipping_value,FLOAT,sum(ecommerce.shipping_value),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
+Metric,Built-in,FALSE,Ecommerce,Shipping value (USD),Shipping_Value_USD,ecommerce.shipping_value_in_usd,FLOAT,sum(ecommerce.shipping_value_in_usd),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
+Metric,Built-in,FALSE,Ecommerce,Tax value,Tax_Value,ecommerce.tax_value,FLOAT,sum(ecommerce.tax_value),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
+Metric,Built-in,FALSE,Ecommerce,Tax value (USD),Tax_Value_USD,ecommerce.tax_value_in_usd,FLOAT,sum(ecommerce.tax_value_in_usd),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
+Metric,Built-in,FALSE,Ecommerce,Total item quantity,Total_Item_Quantity,ecommerce.total_item_quantity,INT,sum(ecommerce.total_item_quantity),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
+Metric,Built-in,FALSE,Ecommerce,Unique items,Unique_Items,ecommerce.unique_items,STRING,sum(ecommerce.unique_item),NA,TRUE,NA,NA,FALSE,FALSE,TRUE,TRUE
+Dimension,Built-in,FALSE,Ecommerce,Transaction ID,Transaction_ID,ecommerce.transaction_id,STRING,ecommerce.transaction_id,NA,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Built-in,FALSE,Events,Event name,Event_Name,event_name,STRING,event_name,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Stream and platform,Platform,Platform,platform,STRING,platform,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Stream and platform,Stream ID,Stream_ID,stream_id,STRING,stream_id,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Date,Date,Date,event_date,STRING,"parse_date(""%Y%m%d"",event_date)",NA,TRUE,NA,NA,FALSE,TRUE,FALSE,FALSE
+Dimension,Calculated,FALSE,Date,Day,Day,NA,STRING,"EXTRACT(DAY FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Calculated,FALSE,Date,Day number (1-7),Day_Number,NA,STRING,"EXTRACT(DAYOFWEEK FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Calculated,FALSE,Date,Month,Month,NA,STRING,"EXTRACT(MONTH FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Calculated,FALSE,Date,Quarter,Quarter,NA,STRING,"EXTRACT(QUARTER FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Calculated,FALSE,Date,Week number (Mon_Sun),Week_number_mon_sun,NA,STRING,"EXTRACT(WEEK(MONDAY) FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Calculated,FALSE,Date,Week number (Sun_Sat),Week_number_sun_sat,NA,STRING,"EXTRACT(WEEK(SUNDAY) FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Calculated,FALSE,Date,Year,Year,NA,STRING,"EXTRACT(YEAR FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
 Metric,Calculated,FALSE,Application,Ad rewards (app),Ad_rewards_app,NA,INT,count(event_name),event_name = 'ad_reward',FALSE,"language, page_location, page_referrer, page_title, screen_resolution","ad_unit_code, reward_type, reward_value",FALSE,FALSE,FALSE,FALSE
 Metric,Calculated,FALSE,Application,App clear data (app),App_clear_data_app,NA,INT,count(event_name),event_name = 'app_clear_data',FALSE,"language, page_location, page_referrer, page_title, screen_resolution",,FALSE,FALSE,FALSE,FALSE
 Metric,Calculated,FALSE,Application,App exceptions (app),App_exceptions_app,NA,INT,count(event_name),event_name = 'app_exception',FALSE,"language, page_location, page_referrer, page_title, screen_resolution","fatal, timestamp, engagement_time_msec",FALSE,FALSE,FALSE,FALSE
@@ -83,12 +83,12 @@ Metric,Calculated,FALSE,General,Post score,Post_score,NA,INT,count(event_name),"
 Metric,Calculated,FALSE,General,Screenviews,Screenviews,NA,INT,count(event_name),"event_name=""screen_view""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution","firebase_screen, firebase_screen_class, firebase_screen_id, firebase_previous_screen, firebase_previous_class, firebase_previous_id, engagement_time_msec",NA,NA,NA,NA
 Metric,Calculated,FALSE,General,Scrolls,Scrolls,NA,INT,count(event_name),"event_name=""scroll""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",engagement_time_msec,NA,NA,NA,NA
 Metric,Calculated,FALSE,General,Searches,Searches,NA,INT,count(event_name),"event_name=""search""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
-Metric,Calculated,FALSE,General,Select Content,Select_Content,NA,INT,count(event_name),"event_name=""select_content""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
+Metric,Calculated,FALSE,General,Select content,Select_content,NA,INT,count(event_name),"event_name=""select_content""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
 Metric,Calculated,FALSE,General,Shares,Shares,NA,INT,count(event_name),"event_name=""share""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
 Metric,Calculated,FALSE,General,Sign ups,Sign_ups,NA,INT,count(event_name),"event_name=""sign_up""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
 Metric,Calculated,FALSE,General,Spend virtual currnecy,Spend_virtual_currnecy,NA,INT,count(event_name),"event_name=""spend_virtual_currency""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
-Metric,Calculated,FALSE,General,Unlock Achievement,Unlock_Achievement,NA,INT,count(event_name),"event_name=""unlock_achievement""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
-Metric,Calculated,FALSE,General,User Engagement,User_Engagement,NA,INT,count(event_name),"event_name=""user_engagement""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",engagement_time_msec,NA,NA,NA,NA
+Metric,Calculated,FALSE,General,Unlock achievement,Unlock_achievement,NA,INT,count(event_name),"event_name=""unlock_achievement""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,NA,NA,NA,NA
+Metric,Calculated,FALSE,General,User engagement,User_engagement,NA,INT,count(event_name),"event_name=""user_engagement""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",engagement_time_msec,NA,NA,NA,NA
 Metric,Calculated,FALSE,Notifications,Notification dismiss,Notification_dismiss,NA,INT,count(event_name),"event_name=""notification_dismiss""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution","message_name, message_time, message_device_time, message_id, topic, label, message_channel",NA,NA,NA,NA
 Metric,Calculated,FALSE,Notifications,Notification foreground,Notification_foreground,NA,INT,count(event_name),"event_name=""notification_foreground""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution","message_name, message_time, message_device_time, message_id, topic, label, message_channel, message_type",NA,NA,NA,NA
 Metric,Calculated,FALSE,Notifications,Notification open,Notification_open,NA,INT,count(event_name),"event_name=""notification_open""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution","message_name, message_time, message_device_time, message_id, topic, label, message_channel",NA,NA,NA,NA
@@ -109,24 +109,23 @@ Metric,Calculated,FALSE,General,Form submit,Form_submit,NA,INT,count(event_name)
 Metric,Calculated,FALSE,General,Generate leads,Generate_leads,NA,INT,count(event_name),"event_name=""generate_lead""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",,NA,NA,NA,NA
 Metric,Calculated,FALSE,General,In app purchases,In_app_purchases,NA,INT,count(event_name),"event_name=""in_app_purchase""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution","product_id, price, value, currency, quantity, subscription, free_trial, introductory_price",NA,NA,NA,NA
 Metric,Calculated,FALSE,General,Join group,Join_group,NA,INT,count(event_name),"event_name=""join_group""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",,NA,NA,NA,NA
-Dimension,Built-in,FALSE,User,User ID,User_ID,user_id,String,user_id,NA,,NA,NA,TRUE,TRUE,FALSE,FALSE
-Dimension,Built-in,FALSE,User,User pseudo ID,User_pseudo_ID,user_pseudo_id,String,user_pseudo_id,NA,,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Built-in,FALSE,User,User ID,User_ID,user_id,STRING,user_id,NA,NA,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Built-in,FALSE,User,User pseudo ID,User_pseudo_ID,user_pseudo_id,STRING,user_pseudo_id,NA,NA,NA,NA,TRUE,TRUE,FALSE,FALSE
 Metric,Calculated,FALSE,General,Tutorial begin,Tutorial_begin,NA,INT,count(event_name),"event_name=""tutorial_begin""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,FALSE,FALSE,FALSE,FALSE
 Metric,Calculated,FALSE,General,Tutorial  complete,Tutorial_complete,NA,INT,count(event_name),"event_name=""tutorial_complete""",FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,FALSE,FALSE,FALSE,FALSE
-Metric,Calculated,FALSE,General,Users,Users,NA,INT,count(DISTINCT user_pseudo_id),,,NA,NA,FALSE,FALSE,FALSE,FALSE
-Metric,Calculated,FALSE,General,New Users,New_Users,NA,INT,"count(distinct case when event_name = ""first_visit"" then user_pseudo_id end)",,,,,,,,
-Metric,Calculated,FALSE,General,Total Events,Total_events,NA,INT,count(*),NA,NA,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Calculated,FALSE,General,Landing page,Landing_page,NA,String,"(SELECT value.string_value FROM unnest(event_params) WHERE key = ""page_location"")",NA,NA,NA,NA,NA,NA,NA,NA
-Metric,Calculated,FALSE,General,Bounce Rate,Bounce_Rate,NA,Float,"ROUND(100*(safe_divide(count(distinct concat(user_pseudo_id,(select value.int_value from unnest(event_params) where key = 'ga_session_id'))) - count(distinct case when (select value.string_value from unnest(event_params) where key = 'session_engaged') = '1' then concat(user_pseudo_id,(select value.int_value from unnest(event_params) where key = 'ga_session_id')) end),count(distinct concat(user_pseudo_id,(select value.int_value from unnest(event_params) where key = 'ga_session_id'))))),2)",na,NA,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Calculated,FALSE,General,Language,Language,NA,String,(SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'Language'),NA,NA,NA,NA,TRUE,TRUE,FALSE,FALSE
-Dimension,Calculated,FALSE,General,Page_location,Page_location,NA,String,(SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'page_location'),NA,NA,NA,NA,TRUE,TRUE,FALSE,FALSE
-Dimension,Calculated,FALSE,General,Page_referrer,Page_referrer,NA,String,(SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'page_referrer'),NA,NA,NA,NA,TRUE,TRUE,FALSE,FALSE
-Dimension,Calculated,FALSE,General,Page Title,Page_Title,NA,String,(SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'page_title'),NA,NA,NA,NA,TRUE,TRUE,FALSE,FALSE
-Dimension,Calculated,FALSE,Date,Event Timestamp,Event_timestamp,event_timestamp,String,event_timestamp,NA,TRUE,NA,NA,NA,NA,NA,NA
+Metric,Calculated,FALSE,General,Users,Users,NA,INT,count(DISTINCT user_pseudo_id),NA,NA,NA,NA,FALSE,FALSE,FALSE,FALSE
+Metric,Calculated,FALSE,General,New users,New_users,NA,INT,"count(distinct case when event_name = ""first_visit"" then user_pseudo_id end)",NA,NA,NA,NA,,,,
+Metric,Calculated,FALSE,General,Total events,Total_events,NA,INT,count(*),NA,NA,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Calculated,FALSE,General,Landing page,Landing_page,NA,STRING,"(SELECT value.string_value FROM unnest(event_params) WHERE key = ""page_location"")",NA,NA,NA,NA,NA,NA,NA,NA
+Metric,Calculated,FALSE,General,Bounce rate,Bounce_rate,NA,FLOAT,"ROUND(100*(safe_divide(count(distinct concat(user_pseudo_id,(select value.int_value from unnest(event_params) where key = 'ga_session_id'))) - count(distinct case when (select value.string_value from unnest(event_params) where key = 'session_engaged') = '1' then concat(user_pseudo_id,(select value.int_value from unnest(event_params) where key = 'ga_session_id')) end),count(distinct concat(user_pseudo_id,(select value.int_value from unnest(event_params) where key = 'ga_session_id'))))),2)",NA,NA,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Calculated,FALSE,General,Language,Language,NA,STRING,(SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'Language'),NA,NA,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Calculated,FALSE,General,Page location,Page_location,NA,STRING,(SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'page_location'),NA,NA,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Calculated,FALSE,General,Page referrer,Page_referrer,NA,STRING,(SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'page_referrer'),NA,NA,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Calculated,FALSE,General,Page title,Page_title,NA,STRING,(SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'page_title'),NA,NA,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Calculated,FALSE,Date,Event timestamp,Event_timestamp,event_timestamp,STRING,event_timestamp,NA,TRUE,NA,NA,NA,NA,NA,NA
 Dimension,Calculated,FALSE,General,Session ID,Session_id,NA,STRING,(SELECT value.int_value FROM UNNEST(event_params) WHERE key = 'ga_session_id'),NA,FALSE,NA,NA,NA,NA,NA,NA
-Dimension,Calculated,FALSE,General,Session Number,Session_number,NA,INT,(SELECT value.int_value FROM UNNEST(event_params) WHERE key = 'ga_session_number'),NA,FALSE,NA,NA,NA,NA,NA,NA
-Dimension,Built-in,FALSE,Ecommerce/items,Affiliation,Affiliation,NA,String,(SELECT value.string_value FROM UNNEST(items) WHERE key = 'affiliation'),NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Calculated,FALSE,General,Session number,Session_number,NA,INT,(SELECT value.int_value FROM UNNEST(event_params) WHERE key = 'ga_session_number'),NA,FALSE,NA,NA,NA,NA,NA,NA
 Metric,Calculated,FALSE,General,Bounces,Bounces,NA,INT,"count(distinct concat(user_pseudo_id,(select value.int_value from unnest(event_params) where key = 'ga_session_id'))) - count(distinct case when (select value.string_value from unnest(event_params) where key = 'session_engaged') = '1' then concat(user_pseudo_id,(select value.int_value from unnest(event_params) where key = 'ga_session_id')) end)",NA,NA,NA,NA,FALSE,FALSE,FALSE,FALSE
-Metric,Built-in,FALSE,Events,Event Value (USD),Event_Value_USD,NA,Float,sum(event_value_in_usd),NA,FALSE,NA,NA,FALSE,FALSE,TRUE,TRUE
-Metric,Calculated,FALSE,General,Avg Pages Per Session,Avg_pages_per_session,NA,FLOAT,"count(distinct case when event_name = ""page_view"" then concat(user_pseudo_id,event_timestamp) end)/count(distinct case when event_name = ""session_start"" then concat(user_pseudo_id,event_timestamp) end)",NA,NA,NA,NA,NA,NA,NA,NA
-Metric,Calculated,FALSE,General,Avg Sessions Per User,Avg_Sessions_Per_User,NA,FLOAT,"count(distinct case when event_name = ""session_start"" then concat(user_pseudo_id,event_timestamp) end)/count(distinct user_pseudo_id)",NA,NA,NA,NA,NA,NA,NA,NA
+Metric,Built-in,FALSE,Events,Event value (USD),Event_value_USD,NA,FLOAT,sum(event_value_in_usd),NA,FALSE,NA,NA,FALSE,FALSE,TRUE,TRUE
+Metric,Calculated,FALSE,General,Avg pages per session,Avg_pages_per_session,NA,FLOAT,"count(distinct case when event_name = ""page_view"" then concat(user_pseudo_id,event_timestamp) end)/count(distinct case when event_name = ""session_start"" then concat(user_pseudo_id,event_timestamp) end)",NA,NA,NA,NA,NA,NA,NA,NA
+Metric,Calculated,FALSE,General,Avg sessions per user,Avg_sessions_per_user,NA,FLOAT,"count(distinct case when event_name = ""session_start"" then concat(user_pseudo_id,event_timestamp) end)/count(distinct user_pseudo_id)",NA,NA,NA,NA,NA,NA,NA,NA
