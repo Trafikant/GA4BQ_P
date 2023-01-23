@@ -134,12 +134,19 @@ Metric,Calculated,FALSE,General,Pages per session,Avg_pages_per_session,NA,Float
 concat(user_pseudo_id,event_timestamp) end)/ 
 count(distinct case when event_name = ""session_start"" then 
 concat(user_pseudo_id,event_timestamp) end)",NA,NA,NA,NA,NA,NA,NA,NA
-Metric,Calculated,FALSE,User,Sessions per user,Avg_Sessions_Per_User,NA,Float,"count(distinct case when event_name = ""session_start"" then 
-concat(user_pseudo_id,event_timestamp) end)/ 
-count(distinct user_pseudo_id)",NA,NA,NA,NA,NA,NA,NA,NA
+Metric,Calculated,FALSE,User,Sessions per user,Avg_Sessions_Per_User,NA,Float,"COUNT(distinct case when event_name = ""session_start"" then 
+concat(user_pseudo_id,event_timestamp) end)/COUNT(distinct user_pseudo_id)",NA,NA,NA,NA,NA,NA,NA,NA
 Metric,Calculated,FALSE,User,New users,New_Users,NA,INT,"count(distinct case when event_name = ""first_visit"" then user_pseudo_id end)",NA,NA,NA,NA,NA,NA,NA,NA
 Metric,Calculated,FALSE,General,Engaged sessions,Engaged_sessions,NA,INT,"count(distinct case when (select value.string_value from unnest(event_params) where key = 'session_engaged') = '1' then concat(user_pseudo_id,(select value.int_value from unnest(event_params) where key = 'ga_session_id')) end)",NA,NA,NA,NA,NA,NA,NA,NA
 Metric,Calculated,FALSE,General,Engagement rate,Engagement_rate,NA,Float,"ROUND(100*(safe_divide(count(distinct case when (select value.string_value from unnest(event_params) where key = 'session_engaged') = '1' then concat(user_pseudo_id,(select value.int_value from unnest(event_params) where key = 'ga_session_id')) end),count(distinct concat(user_pseudo_id,(select value.int_value from unnest(event_params) where key = 'ga_session_id')))),2)",NA,NA,NA,NA,NA,NA,NA,NA
 Dimension,Calculated,FALSE,User,User LTV (currency),User_LTV_currency,user_ltv.currency,String,user_ltv.currency,NA,NA,NA,NA,NA,NA,NA,NA
 Metric,Calculated,FALSE,User,User LTV (revenue),User_LTV_revenue,user_ltv.revenue,Float,user_ltv.revenue,NA,NA,NA,NA,NA,NA,NA,NA
 Dimension,Calculated,FALSE,User,User type (New_Returning),User_type,NA,String,CASE WHEN (select value.int_value from unnest(event_params) where event_name = 'session_start' and key = 'ga_session_number') = 1 THEN 'new visitor' WHEN (select value.int_value from unnest(event_params) where event_name = 'session_start' and key = 'ga_session_number') > 1 THEN 'returning visitor' ELSE null END,NA,NA,NA,NA,NA,NA,NA,NA
+Dimension,Calculated,FALSE,User,User acquisition date,User_acquisition_date,NA,String,"FORMAT_TIMESTAMP('%Y-%m-%d',timestamp_micros(user_first_touch_timestamp))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Calculated,FALSE,User,User acquisition year,User_acquisition_year,NA,String,"FORMAT_TIMESTAMP('%Y',timestamp_micros(user_first_touch_timestamp))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Calculated,FALSE,User,User acquisition month,User_acquisition_month,NA,String,"FORMAT_TIMESTAMP('%m',timestamp_micros(user_first_touch_timestamp))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Calculated,FALSE,User,User acquisition time,User_acquisition_time,NA,String,timestamp_micros(user_first_touch_timestamp),NA,NA,NA,NA,NA,NA,NA,NA
+Metric,Calculated,FALSE,User,Engaged sessions per user,Engaged_sessions_per_user,NA,Float,"COUNT(distinct case when (select value.string_value FROM unnest(event_params) where key = 'session_engaged') = '1' then concat(user_pseudo_id,(select value.int_value from unnest(event_params) where key = 'ga_session_id')) end) / COUNT(distinct user_pseudo_id)",NA,NA,NA,NA,NA,NA,NA,NA
+Dimension,Calculated,FALSE,Date,Day name,Day_name,NA,String,"format_date('%A',parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Calculated,FALSE,Date,Hour,Hour,NA,String,"format(""%02d"",extract(hour from timestamp_micros(event_timestamp)))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Calculated,FALSE,Date,Minute,Minute,NA,String,"format(""%02d"",extract(minute from timestamp_micros(event_timestamp)))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
