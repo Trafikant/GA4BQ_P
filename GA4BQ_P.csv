@@ -150,3 +150,29 @@ Metric,Calculated,FALSE,User,Engaged sessions per user,Engaged_sessions_per_user
 Dimension,Calculated,FALSE,Date,Day name,Day_name,NA,String,"format_date('%A',parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
 Dimension,Calculated,FALSE,Date,Hour,Hour,NA,String,"format(""%02d"",extract(hour from timestamp_micros(event_timestamp)))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
 Dimension,Calculated,FALSE,Date,Minute,Minute,NA,String,"format(""%02d"",extract(minute from timestamp_micros(event_timestamp)))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Ecommerce/items,Item affiliation,Item_affiliation,items.affiliation,String,items.affiliation,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Ecommerce/items,Item coupon,Item_coupon,items.coupon,String,items.coupon,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Ecommerce/items,Item creative name,Item_creative_name,items.creative_name,String,items.creative_name,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Ecommerce/items,Item creative slot,Item_creative_slot,items.creative_slot,String,items.creative_slot,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Ecommerce/items,Item brand,Item_brand,items.item_brand,String,items.item_brand,NA,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Built-in,FALSE,Ecommerce/items,Item category 1,Item_category_1,items.item_category,String,items.item_category,NA,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Built-in,FALSE,Ecommerce/items,Item category 2,Item_category_2,items.item_category2,String,items.item_category2,NA,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Built-in,FALSE,Ecommerce/items,Item category 3,Item_category_3,items.item_category3,String,items.item_category3,NA,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Built-in,FALSE,Ecommerce/items,Item category 4,Item_category_4,items.item_category4,String,items.item_category4,NA,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Built-in,FALSE,Ecommerce/items,Item category 5,Item_category_5,items.item_category5,String,items.item_category5,NA,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Built-in,FALSE,Ecommerce/items,Item ID,Item_ID,items.item_id,String,items.item_id,NA,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Built-in,FALSE,Ecommerce/items,Item list ID,Item_list_ID,items.item_list_id,String,items.item_list_id,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Ecommerce/items,Item list index,Item_list_index,Items.item_list_index,String,Items.item_list_index,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Ecommerce/items,Item list name,Item_list_name,items.item_list_name,String,items.item_list_name,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Built-in,FALSE,Ecommerce/items,Item name,Item_name,items.item_name,String,items.item_name,NA,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
+Metric,Built-in,FALSE,Ecommerce/items,Item refund,Item_refund,items.item_refund,Float,items.item_refund,NA,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
+Metric,Built-in,FALSE,Ecommerce/items,Item refund (USD),Item_refund_USD,items.item_refund_in_usd,Float,items.item_refund_in_usd,NA,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
+Metric,Built-in,FALSE,Ecommerce/items,Item revenue,Item_revenue,items.item_revenue,Float,items.item_revenue,NA,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
+Metric,Built-in,FALSE,Ecommerce/items,Item revenue (USD),Item_revenue_USD,items.item_revenue_in_usd,Float,items.item_revenue_in_usd,NA,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Built-in,FALSE,Ecommerce/items,Item variant,Item_variant,items.item_variant,String,items.item_variant,NA,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Built-in,FALSE,Ecommerce/items,Item location ID,Item_location_ID,items.location_id,String,items.location_id,NA,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
+Metric,Built-in,FALSE,Ecommerce/items,Item price,Item_price,items.price,Float,items.price,NA,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
+Metric,Built-in,FALSE,Ecommerce/items,Item price (USD),Item_price_USD,items.price_in_usd,Float,items.price_in_usd,NA,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Built-in,FALSE,Ecommerce/items,Item promotion ID,Item_promotion_ID,items.promotion_id,String,items.promotion_id,NA,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Built-in,FALSE,Ecommerce/items,Item promotion name,Item_promotion_name,items.promotion_name,String,items.promotion_name,NA,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
+Metric,Built-in,FALSE,Ecommerce/items,Item quantity,Item_quantity,items.quantity,INT,items.quantity,NA,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
