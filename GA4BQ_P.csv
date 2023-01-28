@@ -186,3 +186,4 @@ Dimension,Calculated,FALSE,Video,Video provider,Video_provider,video_provider,St
 Dimension,Calculated,FALSE,Video,Video title,Video_title,video_title,String,(SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'video_title'),NA,NA,NA,NA,TRUE,TRUE,FALSE,FALSE
 Dimension,Calculated,FALSE,Video,Video url,Video_url,video_url,String,(SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'video_url'),NA,NA,NA,NA,TRUE,TRUE,FALSE,FALSE
 Dimension,Calculated,FALSE,Video,Video visible,Video_visible,visible,String,(SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'visible'),NA,NA,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Calculated,FALSE,Device,Screen resolution,Screen_resolution,screen_resolution,String,(SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'screen_resolution'),NA,NA,NA,NA,NA,NA,NA,NA
