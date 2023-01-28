@@ -179,3 +179,10 @@ Metric,Built-in,FALSE,Ecommerce/items,Item quantity,Item_quantity,items.quantity
 Metric,calculated,TRUE,Events,Event value,Event_value,NA,Float,"(SELECT COALESCE(value.int_value, value.float_value, value.double_value) FROM UNNEST (event_params) WHERE key = 'value')",NA,NA,NA,NA,NA,NA,NA,NA
 Metric,calculated,TRUE,Events,Event value (SUM),Event_value_sum,NA,Float,"SUM((SELECT COALESCE(value.int_value, value.float_value, value.double_value) FROM UNNEST (event_params) WHERE key = 'value'))",NA,NA,NA,NA,NA,NA,NA,NA
 Metric,calculated,TRUE,Events,Event value (AVG),Event_value_avg,NA,Float,"AVG((SELECT COALESCE(value.int_value, value.float_value, value.double_value) FROM UNNEST (event_params) WHERE key = 'value'))",NA,NA,NA,NA,NA,NA,NA,NA
+Dimension,Calculated,FALSE,Video,Video current time,Video_current_time,video_current_time,String,(SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'video_current_time'),NA,NA,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Calculated,FALSE,Video,Video duration,Video_duration,video_duration,String,(SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'video_duration'),NA,NA,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Calculated,FALSE,Video,Video percent,Video_percent,video_percent,String,(SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'video_percent'),NA,NA,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Calculated,FALSE,Video,Video provider,Video_provider,video_provider,String,(SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'video_provider'),NA,NA,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Calculated,FALSE,Video,Video title,Video_title,video_title,String,(SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'video_title'),NA,NA,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Calculated,FALSE,Video,Video url,Video_url,video_url,String,(SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'video_url'),NA,NA,NA,NA,TRUE,TRUE,FALSE,FALSE
+Dimension,Calculated,FALSE,Video,Video visible,Video_visible,visible,String,(SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'visible'),NA,NA,NA,NA,TRUE,TRUE,FALSE,FALSE
