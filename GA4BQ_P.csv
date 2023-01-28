@@ -177,3 +177,5 @@ Dimension,Built-in,FALSE,Ecommerce/items,Item promotion ID,Item_promotion_ID,ite
 Dimension,Built-in,FALSE,Ecommerce/items,Item promotion name,Item_promotion_name,items.promotion_name,String,items.promotion_name,NA,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
 Metric,Built-in,FALSE,Ecommerce/items,Item quantity,Item_quantity,items.quantity,INT,items.quantity,NA,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
 Metric,calculated,TRUE,Events,Event value,Event_value,NA,Float,"(SELECT COALESCE(value.int_value, value.float_value, value.double_value) FROM UNNEST (event_params) WHERE key = 'value')",NA,NA,NA,NA,NA,NA,NA,NA
+Metric,calculated,TRUE,Events,Event value (SUM),Event_value_sum,NA,Float,"SUM((SELECT COALESCE(value.int_value, value.float_value, value.double_value) FROM UNNEST (event_params) WHERE key = 'value'))",NA,NA,NA,NA,NA,NA,NA,NA
+Metric,calculated,TRUE,Events,Event value (AVG),Event_value_avg,NA,Float,"AVG((SELECT COALESCE(value.int_value, value.float_value, value.double_value) FROM UNNEST (event_params) WHERE key = 'value'))",NA,NA,NA,NA,NA,NA,NA,NA
