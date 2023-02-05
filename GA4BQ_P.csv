@@ -62,7 +62,7 @@ Dimension,Calculated,FALSE,Content,Page_location,Page_location,NA,String,(SELECT
 Dimension,Calculated,FALSE,Content,Page_referrer,Page_referrer,NA,String,(SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'page_referrer'),NA,NA,NA,NA,TRUE,TRUE,FALSE,FALSE
 Dimension,Calculated,FALSE,Content,Page_title,Page_title,NA,String,(SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'page_title'),NA,NA,NA,NA,TRUE,TRUE,FALSE,FALSE
 Dimension,Built-in,FALSE,Events,Event name,Event_Name,event_name,String,event_name,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Metric,Built-in,FALSE,Events,Event value (USD),Event_Value_USD,NA,Float,sum(event_value_in_usd),NA,FALSE,NA,NA,FALSE,FALSE,TRUE,TRUE
+Metric,Built-in,FALSE,Events,Event value (USD),Event_value_USD,NA,Float,sum(event_value_in_usd),NA,FALSE,NA,NA,FALSE,FALSE,TRUE,TRUE
 Metric,Calculated,FALSE,Ecommerce,Add payment info,Add_payment_info,NA,INT,count(event_name),event_name = 'add_payment_info',FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,FALSE,FALSE,FALSE,FALSE
 Metric,Calculated,FALSE,Ecommerce,Add shipping info,Add_shipping_info,NA,INT,count(event_name),event_name = 'add_shipping_info',FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,FALSE,FALSE,FALSE,FALSE
 Metric,Calculated,FALSE,Ecommerce,Add to cart,Add_to_cart,NA,INT,count(event_name),event_name = 'add_to_cart',FALSE,"language, page_location, page_referrer, page_title, screen_resolution",NA,FALSE,FALSE,FALSE,FALSE
@@ -101,7 +101,7 @@ Dimension,Built-in,FALSE,Device,Mobile OS hardware model,Mobile_OS_hardware_mode
 Dimension,Built-in,FALSE,Device,Operating system,Operating_system,device.operating_system,String,device.operating_system,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
 Dimension,Built-in,FALSE,Device,Operating system version,Operating_system_version,device.operating_system_version,String,device.operating_system_version,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
 Dimension,Built-in,FALSE,Device,Vendor ID,Vendor_ID,device.vendor_id,String,device.vendor_id,NA,TRUE,TRUE,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Calculated,FALSE,Date,Event timestamp,Event_timetamp,event_timetamp,String,event_timetamp,NA,TRUE,NA,NA,NA,NA,NA,NA
+Dimension,Calculated,FALSE,Date,Event timestamp,Event_timestamp,event_timestamp,String,event_timestamp,NA,TRUE,NA,NA,NA,NA,NA,NA
 Dimension,Built-in,FALSE,Date,Date,Date,event_date,String,"parse_date(""%Y%m%d"",event_date)",NA,TRUE,NA,NA,FALSE,TRUE,FALSE,FALSE
 Dimension,Calculated,FALSE,Date,Day,Day,NA,String,"EXTRACT(DAY FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
 Dimension,Calculated,FALSE,Date,Day number (1-7),Day_number,NA,String,"EXTRACT(DAYOFWEEK FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
@@ -128,13 +128,13 @@ Dimension,Built-in,FALSE,App,App info Firebase app ID,App info Firebase app ID,a
 Dimension,Built-in,FALSE,App,App info ID,App info ID,app_info.id,String,app_info.id,NA,TRUE,NA,NA,TRUE,TRUE,FALSE,FALSE
 Dimension,Built-in,FALSE,App,App info install source,App info install source,app_info.install_source,String,app_info.install_source,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
 Dimension,Built-in,FALSE,App,App info version,App info version,app_info.version,String,app_info.version,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Metric,Calculated,FALSE,General,New Users,New_Users,NA,INT,"count(distinct case when event_name = ""first_visit"" then user_pseudo_id end)",NA,NA,NA,NA,NA,NA,NA,NA
+Metric,Calculated,FALSE,General,New users,New_users,NA,INT,"count(distinct case when event_name = ""first_visit"" then user_pseudo_id end)",NA,NA,NA,NA,NA,NA,NA,NA
 Dimension,Calculated,FALSE,Content,Landing page,Landing_page,NA,String,"(SELECT value.string_value FROM unnest(event_params) WHERE key = ""page_location"")",NA,NA,NA,NA,NA,NA,NA,NA
 Metric,Calculated,FALSE,General,Pages per session,Avg_pages_per_session,NA,Float,"count(distinct case when event_name = ""page_view"" then 
 concat(user_pseudo_id,event_timestamp) end)/ 
 count(distinct case when event_name = ""session_start"" then 
 concat(user_pseudo_id,event_timestamp) end)",NA,NA,NA,NA,NA,NA,NA,NA
-Metric,Calculated,FALSE,User,Sessions per user,Avg_Sessions_Per_User,NA,Float,"COUNT(distinct case when event_name = ""session_start"" then 
+Metric,Calculated,FALSE,User,Sessions per user,Avg_sessions_per_user,NA,Float,"COUNT(distinct case when event_name = ""session_start"" then 
 concat(user_pseudo_id,event_timestamp) end)/COUNT(distinct user_pseudo_id)",NA,NA,NA,NA,NA,NA,NA,NA
 Metric,Calculated,FALSE,User,New users,New_Users,NA,INT,"count(distinct case when event_name = ""first_visit"" then user_pseudo_id end)",NA,NA,NA,NA,NA,NA,NA,NA
 Metric,Calculated,FALSE,General,Engaged sessions,Engaged_sessions,NA,INT,"count(distinct case when (select value.string_value from unnest(event_params) where key = 'session_engaged') = '1' then concat(user_pseudo_id,(select value.int_value from unnest(event_params) where key = 'ga_session_id')) end)",NA,NA,NA,NA,NA,NA,NA,NA
