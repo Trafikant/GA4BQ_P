@@ -136,7 +136,6 @@ count(distinct case when event_name = ""session_start"" then
 concat(user_pseudo_id,event_timestamp) end)",NA,NA,NA,NA,NA,NA,NA,NA
 Metric,Calculated,FALSE,User,Sessions per user,Avg_sessions_per_user,NA,Float,"COUNT(distinct case when event_name = ""session_start"" then 
 concat(user_pseudo_id,event_timestamp) end)/COUNT(distinct user_pseudo_id)",NA,NA,NA,NA,NA,NA,NA,NA
-Metric,Calculated,FALSE,User,New users,New_Users,NA,INT,"count(distinct case when event_name = ""first_visit"" then user_pseudo_id end)",NA,NA,NA,NA,NA,NA,NA,NA
 Metric,Calculated,FALSE,General,Engaged sessions,Engaged_sessions,NA,INT,"count(distinct case when (select value.string_value from unnest(event_params) where key = 'session_engaged') = '1' then concat(user_pseudo_id,(select value.int_value from unnest(event_params) where key = 'ga_session_id')) end)",NA,NA,NA,NA,NA,NA,NA,NA
 Metric,Calculated,FALSE,General,Engagement rate,Engagement_rate,NA,Float,"ROUND(100*(safe_divide(count(distinct case when (select value.string_value from unnest(event_params) where key = 'session_engaged') = '1' then concat(user_pseudo_id,(select value.int_value from unnest(event_params) where key = 'ga_session_id')) end),count(distinct concat(user_pseudo_id,(select value.int_value from unnest(event_params) where key = 'ga_session_id')))),2)",NA,NA,NA,NA,NA,NA,NA,NA
 Dimension,Calculated,FALSE,User,User LTV (currency),User_LTV_currency,user_ltv.currency,String,user_ltv.currency,NA,NA,NA,NA,NA,NA,NA,NA
