@@ -198,3 +198,4 @@ Dimension,Calculated,TRUE,Forms,Form id,Form_id,form_id,String,(SELECT value.str
 Dimension,Calculated,TRUE,Forms,Form name,Form_name,form_name,String,(SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'form_name'),NA,NA,NA,NA,NA,NA,NA,NA
 Dimension,Calculated,TRUE,Forms,Form destination,Form_destination,form_destination,String,(SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'form_destination'),NA,NA,NA,NA,NA,NA,NA,NA
 Dimension,Calculated,TRUE,Forms,Form submit text,Form_submit_text,form_submit_text,String,(SELECT value.string_value FROM UNNEST(event_params) WHERE key = 'form_submit_text'),NA,NA,NA,NA,NA,NA,NA,NA
+Dimension,Calculated,FALSE,Content,Page path,Page_path,NA,String,"regexp_replace(regexp_replace((select temptable.value.string_value from unnest(event_params) as temptable where temptable.key = 'page_location'),r'^https?://[^/]+',''),r'[\?].*','')",NA,NA,NA,NA,NA,NA,NA,NA
