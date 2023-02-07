@@ -107,8 +107,8 @@ Dimension,Calculated,FALSE,Date,Day,Day,NA,String,"EXTRACT(DAY FROM parse_date("
 Dimension,Calculated,FALSE,Date,Day number (1-7),Day_number,NA,String,"EXTRACT(DAYOFWEEK FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
 Dimension,Calculated,FALSE,Date,Month,Month,NA,String,"EXTRACT(MONTH FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
 Dimension,Calculated,FALSE,Date,Quarter,Quarter,NA,String,"EXTRACT(QUARTER FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Calculated,FALSE,Date,Week_number_mon_sun,Week_number_mon_sun,NA,String,"EXTRACT(WEEK(MONDAY) FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
-Dimension,Calculated,FALSE,Date,Week_number_sun_sat,Week_number_sun_sat,NA,String,"EXTRACT(WEEK(SUNDAY) FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Calculated,FALSE,Date,Week number (Mon-Sun),Week_number_mon_sun,NA,String,"EXTRACT(WEEK(MONDAY) FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
+Dimension,Calculated,FALSE,Date,Week number (Sun-Sat),Week_number_sun_sat,NA,String,"EXTRACT(WEEK(SUNDAY) FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
 Dimension,Calculated,FALSE,Date,Year,Year,NA,String,"EXTRACT(YEAR FROM parse_date(""%Y%m%d"",event_date))",NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
 Dimension,Built-in,FALSE,Acquisition,User first campaign,user_campaign,traffic_source.name,String,traffic_source.name,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
 Dimension,Built-in,FALSE,Acquisition,User first medium,user_medium,traffic_source.medium,String,traffic_source.medium,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
