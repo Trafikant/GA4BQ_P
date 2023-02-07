@@ -207,10 +207,4 @@ Dimension,Calculated,FALSE,Content,Page path,Page_path,NA,String,"regexp_replace
         unnest(event_params) as pagepathtemp
       where
         pagepathtemp.key = 'page_location'
-    ),
-    r'^https?://[^/]+',
-    ''
-  ),
-  r'[\?].*',
-  ''
-)",NA,NA,NA,NA,NA,NA,NA,NA
+    ), r'^https?://[^/]+',''), r'[\?].*','')",NA,NA,NA,NA,NA,NA,NA,NA
