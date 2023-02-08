@@ -129,7 +129,7 @@ Dimension,Built-in,FALSE,App,App info ID,App info ID,app_info.id,String,app_info
 Dimension,Built-in,FALSE,App,App info install source,App info install source,app_info.install_source,String,app_info.install_source,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
 Dimension,Built-in,FALSE,App,App info version,App info version,app_info.version,String,app_info.version,NA,TRUE,NA,NA,FALSE,FALSE,FALSE,FALSE
 Metric,Calculated,FALSE,General,New users,New_users,NA,INT,"count(distinct case when event_name = ""first_visit"" then user_pseudo_id end)",NA,NA,NA,NA,NA,NA,NA,NA
-Dimension,Calculated,FALSE,Content,Landing page,Landing_page,NA,String,"(SELECT value.string_value FROM unnest(event_params) WHERE key = ""page_location"")",NA,NA,NA,NA,NA,NA,NA,NA
+Dimension,Calculated,FALSE,Content,Landing page,Landing_page,NA,String,CASE WHEN (SELECT value.int_value FROM UNNEST(event_params) WHERE event_name = 'page_view' AND key = 'entrances') = 1 THEN (SELECT value.string_value FROM UNNEST(event_params) WHERE event_name = 'page_view' AND key = 'page_location') END,NA,NA,NA,NA,NA,NA,NA,NA
 Metric,Calculated,FALSE,General,Pages per session,Avg_pages_per_session,NA,Float,"count(distinct case when event_name = ""page_view"" then 
 concat(user_pseudo_id,event_timestamp) end)/ 
 count(distinct case when event_name = ""session_start"" then 
